@@ -58,10 +58,10 @@
   @media(max-width:768px){br.mn-br-lg{display:none;}}
   br.mn-br-mo{display:none;}
   @media(max-width:768px){br.mn-br-mo{display:inline;}}
-  /* 모바일에서만 적용되는 강조. 데스크톱 요청이 오면 미디어쿼리만 걷어내면 된다 */
+  /* 강조 유틸 (전 화면 공통) */
+  .mn-em-strong{font-weight:700;color:#fff;}
+  .mn-em-accent{color:#9d8bff !important;} /* 기존 b 색 규칙보다 명시도가 낮아 필요 */
   @media(max-width:768px){
-    .mn-mo-strong{font-weight:700;color:#fff;}
-    .mn-mo-accent{color:#9d8bff !important;} /* 기존 b 색 규칙보다 명시도가 낮아 필요 */
     .mn-legal-sep{display:none;}
   }
   /* 좁은 데스크톱에서 줄이 넘쳐 두 글자짜리 고아 줄이 생기는 긴 문장용 */
@@ -895,7 +895,7 @@
       <div class="mn-head">
         <div class="aq-label">ONE STANDARD <span style="display:inline-block;">- 채용의 기준을, 입사 후에도</span></div>
         <h2 class="aq-h2">채용과 성과를 연결하려면,<br><span style="color:#9d8bff;">하나의 기준</span>이 필요합니다.</h2>
-        <p class="mn-lead">AQbar는 <b>채용부터 재직까지 하나의 기준</b>으로 사람의 판단과 문제해결 과정을 측정합니다. <br class="mn-br-lg">같은 기준으로 계속 측정해야 <span class="mn-mo-strong">역량이 어떻게 변하고 성장</span>했는지 알 수 있습니다.</p>
+        <p class="mn-lead">AQbar는 <b>채용부터 재직까지 하나의 기준</b>으로 사람의 판단과 문제해결 과정을 측정합니다. <br class="mn-br-lg">같은 기준으로 계속 측정해야 <span class="mn-em-strong">역량이 어떻게 변하고 성장</span>했는지 알 수 있습니다.</p>
       </div>
 
       <!-- 하나의 기준: EMPLOYEE LIFE CYCLE (원형을 잠시 보여준 뒤 직선으로 풀림) -->
@@ -1014,7 +1014,7 @@
         <div class="mn-teaser__num">10건 중 <b>4건</b></div>
         <div class="mn-teaser__txt">
           <p><b>AI에 의존할수록, 스스로 의심하고 검증하는 힘이 약해집니다.</b></p>
-          <p>지식근로자의 실제 업무 936건 가운데 10건에 4건은 AI의 답이 <b class="mn-mo-accent">별도 검증 없이 그대로</b> 쓰였습니다.</p>
+          <p>지식근로자의 실제 업무 936건 가운데 10건에 4건은 AI의 답이 <b class="mn-em-accent">별도 검증 없이 그대로</b> 쓰였습니다.</p>
         </div>
         <span class="mn-teaser__src">Microsoft Research &times; Carnegie Mellon · CHI 2025 · 자세한 내용은 아래에서</span>
       </div>
