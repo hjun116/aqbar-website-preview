@@ -447,7 +447,7 @@
   .dg-flow-div { margin: 22px 0 18px; border-top: 1px solid var(--border); }
   .dg-flow-impact-label { display: flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 700; letter-spacing: .1em; color: #9a9689; }
   .dg-flow-col--key .dg-flow-impact-label { color: var(--accent); }
-  .dg-flow-col h4 { margin: 12px 0 0; font-size: 15.5px; font-weight: 700; line-height: 1.4; color: var(--ink); }
+  .dg-flow-col h4 { margin: 12px 0 0; font-size: 18px; font-weight: 700; line-height: 1.4; color: var(--ink); }
   .dg-flow-col ul { margin: 12px 0 0; padding-left: 16px; color: var(--muted); font-size: 12.5px; line-height: 1.75; }
   .dg-flow-arrow {
     position: absolute; right: -13px; top: 50%; z-index: 2; transform: translateY(-50%);
@@ -717,7 +717,8 @@
   table.nmT td b{display:block;padding:10px 0;border-radius:5px;font-size:13.5px;font-weight:700;}
   table.nmT td.avg{font-size:13.5px;font-weight:800;color:var(--primary-deep);}
   table.nmT tr.wk td:first-child{color:var(--accent);font-weight:800;}
-  table.nmT tfoot td{padding-top:10px;border-top:1px solid var(--border);font-size:12.5px;font-weight:800;color:var(--primary-deep);}
+  table.nmT tbody tr:last-child td{padding-bottom:16px;}
+  table.nmT tfoot td{padding-top:16px;border-top:1px solid var(--border);font-size:12.5px;font-weight:800;color:var(--primary-deep);}
   .nm__lg{display:flex;align-items:center;gap:8px;font-size:11.5px;color:var(--muted);}
   .nm__lg i{width:26px;height:11px;border-radius:2px;display:block;}
   table.nmT--fx{table-layout:fixed;}
@@ -727,6 +728,9 @@
   table.nmT--fx td.rng{font-size:11px;font-weight:700;color:#5a6573;font-variant-numeric:tabular-nums;}
   table.nmT--fx td.risk{font-size:12.5px;font-weight:800;color:#5a6573;}
   table.nmT--fx tr.wk td.risk{color:#c96a6a;}
+  table.nmT--fx tr.wk td{border-top:2px solid #c96a6a;border-bottom:2px solid #c96a6a;}
+  table.nmT--fx tr.wk td:first-child{border-left:2px solid #c96a6a;}
+  table.nmT--fx tr.wk td:last-child{border-right:2px solid #c96a6a;}
   table.nmT--fx tfoot tr.ft2 td{padding-top:5px;border-top:none;color:#8d8a80;font-weight:700;}
   .sl__m{display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-size:11.5px;padding:6px 0;border-top:1px solid #f2f0e9;}
   .sl__m span{color:#a9a598;font-size:11px;line-height:1.4;}
@@ -1383,7 +1387,7 @@
             <tr class="ft2"><td>부서 내 개인 격차</td><td>23</td><td>34</td><td>36</td><td>26</td><td>32</td><td>30.2</td><td>—</td><td>—</td></tr>
           </tfoot>
         </table></div>
-        <p style="margin:20px 0 0;font-size:14px;line-height:1.7;color:var(--muted);"><strong style="color:var(--ink);">자기검증 지표는 평균 57점으로 모든 부서에서 공통적으로 가장 낮았습니다.</strong> 응시자의 61%가 60점 미만이었고, 부서 간 격차는 9점에 그친 반면, 부서 <em style="font-style:normal;color:var(--ink);">내</em> 개인 간 격차는 평균 30점에 달했습니다. 조직 전체의 교육보다 개인별 역량 차이에 맞춘 접근이 필요한 영역입니다.</p>
+        <p style="margin:20px 0 0;font-size:14px;line-height:1.7;color:var(--muted);"><strong style="color:var(--ink);">자기검증 지표는 평균 57점으로 모든 부서에서 공통적으로 가장 낮았습니다.</strong><br>응시자의 61%가 60점 미만이었고, 부서 간 격차는 9점에 그친 반면, 부서 <em style="font-style:normal;color:var(--ink);">내</em> 개인 간 격차는 평균 30점에 달했습니다.<br>조직 전체의 교육보다 개인별 역량 차이에 맞춘 접근이 필요한 영역입니다.</p>
       </div>
         </div>
       </div>
@@ -1391,8 +1395,8 @@
       <!-- 데이터 스토리 -->
       <div class="dg-story">
         <div class="dg-story__head">
-          <h3>같은 점수로 뽑았는데, 진단을 이어가면 차이가 보입니다.</h3>
-          <p>채용 당시 세 사람의 점수는 <strong>71~73점</strong>으로 비슷했습니다. 서류와 면접만으로는 차이를 확인하기 어려웠습니다. 하지만 채용 평가부터 수습기간 월별 평가, 재직 중 정기 진단까지 <strong>같은 7개 지표로 다섯 차례</strong> 측정하면, 분명한 차이가 나타납니다.</p>
+          <h3>같은 점수로 시작했지만, 진단을 이어가면 차이가 보입니다.</h3>
+          <p>채용 당시 세 사람의 점수는 <strong>71~73점</strong>으로 비슷했습니다. 서류와 면접만으로는 차이를 확인하기 어려웠습니다.<br>하지만 채용 평가부터 수습기간 월별 평가, 재직 중 정기 진단까지 <strong>같은 7개 지표로 다섯 차례</strong> 측정하면, 분명한 차이가 나타납니다.</p>
         </div>
         <div class="wbx" style="margin:34px 0 0;background:#fff;border:1px solid #e6e3d9;border-radius:12px;padding:26px 28px;">
 <div class="sl" style="margin-top:26px;">
@@ -1410,7 +1414,7 @@
                 <line x1="70" y1="141" x2="880" y2="141"></line>
                 <line x1="70" y1="87" x2="880" y2="87"></line>
               </g>
-              <g font-family="Pretendard, sans-serif" font-size="10.5" fill="#c3bfb2" text-anchor="end">
+              <g font-family="Pretendard, sans-serif" font-size="10.5" font-weight="700" fill="var(--ink)" text-anchor="end">
                 <text x="52" y="307">50</text><text x="52" y="253">60</text><text x="52" y="199">70</text><text x="52" y="145">80</text><text x="52" y="91">90</text>
               </g>
               <g stroke="#eceae2" stroke-width="1" stroke-dasharray="3 4">
@@ -1435,7 +1439,7 @@
                 <text x="90" y="212">72 · 71</text>
               </g>
               <g font-family="Pretendard, sans-serif" text-anchor="middle">
-                <g font-size="12" font-weight="700" fill="#5a6573">
+                <g font-size="12" font-weight="700" fill="var(--ink)">
                   <text x="90" y="352">채용 평가</text>
                   <text x="265" y="352">수습 평가 1차</text>
                   <text x="440" y="352">수습 평가 2차</text>
