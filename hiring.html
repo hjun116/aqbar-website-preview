@@ -489,7 +489,7 @@
           <span style="width:16px;height:2px;background:var(--accent);"></span>
           <span style="font-size:14px;font-weight:600;letter-spacing:.1em;color:var(--accent);text-transform:uppercase;">채용 평가</span>
         </div>
-        <h1 style="margin:0;font-size:clamp(26px,3.3vw,42px);line-height:1.25;letter-spacing:-.03em;font-weight:700;color:var(--ink);">아직도 <span class="hb-role" data-rot style="color:var(--accent);border-bottom:3px solid #cbc6f0;padding-bottom:1px;">PM/PO</span><span class="hb-josa">를</span>,<br>이력서로 <span style="color:var(--accent);">가려내고 계십니까?</span></h1>
+        <h1 style="margin:0;font-size:clamp(26px,3.3vw,42px);line-height:1.25;letter-spacing:-.03em;font-weight:700;color:var(--ink);">우리 조직의 새 <span class="hb-role" data-rot style="color:var(--accent);border-bottom:3px solid #cbc6f0;padding-bottom:1px;">PM/PO</span> 채용,<br>서류와 면접만으로 <span style="color:var(--accent);">충분할까요?</span></h1>
         <div class="hb-rolebar hb-rolebar--left" style="display:flex;gap:7px;flex-wrap:wrap;margin:22px 0 0;">
           <span class="on">PM/PO</span><span>그로스 마케터</span><span>전략기획</span><span>사업개발</span><span>글로벌 MD</span><span>B2B 세일즈</span><span>브랜드 마케터</span><span>콘텐츠 기획</span><span class="more">…그 외 직무 무엇이든</span>
         </div>
@@ -1260,7 +1260,7 @@
 <script src="contact-config.js"></script>
 <script src="contact-form.js"></script>
 <script>
-(function(){var roles=['PM/PO','그로스 마케터','전략기획','사업개발','글로벌 MD','B2B 세일즈','브랜드 마케터','콘텐츠 기획'];var josas=['를','를','을','을','를','를','를','을'];var el=document.querySelector('.hb-role[data-rot]');var jo=document.querySelector('.hb-josa');var bar=document.querySelector('.hb-rolebar');if(!el)return;var i=0;setInterval(function(){i=(i+1)%roles.length;el.classList.add('sw');setTimeout(function(){el.textContent=roles[i];if(jo)jo.textContent=josas[i];el.classList.remove('sw');},280);if(bar)[].slice.call(bar.children).forEach(function(s){s.classList.toggle('on',s.textContent===roles[i]);});},2400);})();
+(function(){var roles=['PM/PO','그로스 마케터','전략기획','사업개발','글로벌 MD','B2B 세일즈','브랜드 마케터','콘텐츠 기획'];var el=document.querySelector('.hb-role[data-rot]');var bar=document.querySelector('.hb-rolebar');if(!el)return;var i=0;setInterval(function(){i=(i+1)%roles.length;el.classList.add('sw');setTimeout(function(){el.textContent=roles[i];el.classList.remove('sw');},280);if(bar)[].slice.call(bar.children).forEach(function(s){s.classList.toggle('on',s.textContent===roles[i]);});},2400);})();
 </script>
 <button type="button" class="mn-top" aria-label="맨 위로 이동">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
