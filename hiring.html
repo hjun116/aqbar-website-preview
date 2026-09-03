@@ -120,43 +120,6 @@
   }
 
   /* ================================================
-     7. ANIMATIONS (unchanged from original)
-     ================================================ */
-  @keyframes aqFade     { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
-  @keyframes aqMarqueeL { from { transform: translateX(0);    } to { transform: translateX(-50%); } }
-  @keyframes aqMarqueeR { from { transform: translateX(-50%); } to { transform: translateX(0);    } }
-
-  .aq-mq-wrap {
-    overflow: hidden;
-    -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
-    mask-image:         linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
-  }
-  .aq-mq       { display: flex; gap: 20px; width: max-content; will-change: transform; animation: aqMarqueeL 64s linear infinite; }
-  .aq-mq.rev   { animation-name: aqMarqueeR; animation-duration: 72s; }
-  .aq-mq-wrap:hover .aq-mq { animation-play-state: paused; }
-  @media (prefers-reduced-motion: reduce) { .aq-mq { animation: none; } }
-
-  /* ================================================
-     8. FAQ (unchanged from original)
-     ================================================ */
-  .aq-faq summary                       { list-style: none; cursor: pointer; }
-  .aq-faq summary::-webkit-details-marker { display: none; }
-  .aq-faq summary::marker               { content: ''; }
-  .aq-faq-plus {
-    display: inline-flex; align-items: center; justify-content: center;
-    width: 30px; height: 30px; border-radius: 50%;
-    border: 1.5px solid var(--border); color: var(--muted);
-    font-size: 18px; line-height: 1; flex: none;
-    transition: transform .25s ease, background .2s, color .2s, border-color .2s;
-  }
-  .aq-faq details[open] .aq-faq-plus    { transform: rotate(45deg); background: var(--primary); border-color: var(--primary); color: #fff; }
-  .aq-faq details[open] > summary       { color: var(--primary); }
-  .aq-faq summary:hover                 { background: #fafaf6; }
-  .aq-cat-btn[data-active="true"]       { background: var(--primary) !important; border-color: var(--primary) !important; color: #fff !important; }
-  .aq-cat-btn:hover                     { border-color: var(--primary); color: var(--primary); }
-  .aq-cat-btn[data-active="true"]:hover { color: #fff; }
-
-  /* ================================================
      9. NAV RESPONSIVE
      ================================================ */
   .aq-nav-links {
@@ -262,8 +225,7 @@
       line-height: 1.35 !important;
     }
     [data-screen-label="Hero"] h1 span { font-size: inherit !important; }
-    /* 라이프사이클 축은 절대배치라 이 패딩 대상에서 제외한다 */
-    [data-screen-label="Hero"] > div:not(.aq-hero-axis) {
+    [data-screen-label="Hero"] > div {
       padding: 56px 20px 116px !important;
     }
     [data-screen-label="Hero"] p {
@@ -410,139 +372,6 @@
     .aq-life-arrow      { justify-content: center; transform: rotate(90deg); padding: 4px 0 !important; }
   }
 
-  /* ================================================
-     14b. HERO LIFECYCLE AXIS + VOICE GRID — 초안 추가분
-     ================================================ */
-  .aq-hero-axis {
-    position: absolute; left: 0; right: 0; bottom: 34px;
-    pointer-events: none; z-index: 0;
-  }
-  .aq-hero-axis__inner { max-width: 1180px; margin: 0 auto; padding: 0 32px; position: relative; }
-  .aq-hero-axis__line {
-    position: absolute; left: 44px; right: 44px; top: 5px; height: 2px; border-radius: 1px;
-    background: linear-gradient(90deg,
-      rgba(75,63,214,.55) 0%, rgba(75,63,214,.13) 32%,
-      rgba(75,63,214,.13) 68%, rgba(75,63,214,.55) 100%);
-  }
-  .aq-hero-axis__nodes { display: flex; justify-content: space-between; align-items: flex-start; }
-  .aq-hero-axis__node { display: flex; flex-direction: column; align-items: center; gap: 10px; flex: 1; }
-  .aq-hero-axis__node i {
-    width: 12px; height: 12px; border-radius: 50%;
-    border: 2px solid rgba(75,63,214,.3); background: #fff; box-sizing: border-box;
-  }
-  .aq-hero-axis__node.is-on i { border-color: var(--accent); background: var(--accent); }
-  .aq-hero-axis__node span {
-    font-size: 12px; font-weight: 600; letter-spacing: .02em; color: #a9a396; white-space: nowrap;
-  }
-  .aq-hero-axis__node.is-on span { color: var(--accent); }
-
-  .aq-voice-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; align-items: stretch; }
-
-  @media (max-width: 768px) {
-    .aq-hero-axis { bottom: 22px; }
-    .aq-hero-axis__inner { padding: 0 20px; }
-    .aq-hero-axis__line { left: 30px; right: 30px; }
-    .aq-hero-axis__node span { font-size: 10.5px; }
-    .aq-hero-axis__node i { width: 10px; height: 10px; }
-    .aq-voice-grid { grid-template-columns: 1fr !important; gap: 16px; }
-
-    /* 연구 근거 밴드 */
-    .aq-research-stats  { grid-template-columns: 1fr !important; gap: 26px !important; }
-    .aq-research-flip   { grid-template-columns: 1fr !important; gap: 22px !important; padding: 26px 22px !important; }
-    .aq-research-flip > div:last-child { border-left: none !important; border-top: 2px solid #7f9fe0; padding-left: 0 !important; padding-top: 20px; }
-    .aq-method-evidence { grid-template-columns: 1fr !important; }
-  }
-
-  /* ================================================
-     15. LINK SECTION (채용↔재직 연결) — 초안 추가분
-     ================================================ */
-  .aq-dumb-axis,
-  .aq-dumb-row   { display: grid; grid-template-columns: minmax(104px,168px) 1fr 62px; gap: 16px; align-items: center; }
-  .aq-dumb-axis  { font-size: 11.5px; color: var(--muted); padding: 12px 0 4px; }
-  .aq-dumb-row   { padding: 4px 0; }
-  .aq-dumb-track { position: relative; height: 36px; border-bottom: 1px solid #f0efe9; }
-  .aq-dumb-link  { position: absolute; top: 50%; transform: translateY(-50%); height: 3px; border-radius: 2px; }
-  .aq-dumb-pt    { position: absolute; top: 50%; transform: translate(-50%,-50%); border-radius: 50%; box-shadow: 0 0 0 2px #fff; }
-  .aq-dumb-old   { width: 12px; height: 12px; background: #fff; border: 2px solid #a9a396; }
-  .aq-dumb-new   { width: 13px; height: 13px; }
-  .aq-dumb-d     { text-align: right; font-size: 13px; font-weight: 700; font-variant-numeric: tabular-nums; }
-  .aq-curve-wrap { margin-top: 26px; overflow-x: auto; }
-  .aq-curve-wrap svg { display: block; min-width: 640px; width: 100%; height: auto; }
-  .aq-curve-hint { display: none; margin: 8px 0 0; font-size: 12px; color: var(--muted); text-align: center; }
-
-  @media (max-width: 768px) {
-    /* 좁은 화면: 지표명을 위로 올리고 막대가 가로 전체를 쓰게 한다 */
-    .aq-dumb-axis  { grid-template-columns: 1fr; gap: 0; padding: 14px 0 2px; }
-    .aq-dumb-axis > div:first-child,
-    .aq-dumb-axis > div:last-child { display: none; }
-    .aq-dumb-row {
-      grid-template-columns: 1fr auto;
-      grid-template-areas: "name delta" "track track";
-      column-gap: 12px; row-gap: 2px; padding: 10px 0 2px;
-    }
-    .aq-dumb-name  { grid-area: name; }
-    .aq-dumb-d     { grid-area: delta; font-size: 14px; }
-    .aq-dumb-track { grid-area: track; height: 30px; }
-    .aq-curve-hint { display: block; }
-  }
-
-
-  /* ===== 연구 근거 섹션 (조직진단 v10 이식) ===== */
-  :root{ --on-dark-label:#7f9fe0; --on-dark-body:#aebfd6; --on-dark-rule:#2f5286; }
-  #research .aq-label{ color:var(--on-dark-label); }
-  #research .aq-h2{ color:#fff; }
-  .dg-axiom{ max-width:900px; padding-left:28px; border-left:3px solid var(--on-dark-label); }
-  .dg-axiom__tag{ font-family:'Pretendard',sans-serif; font-size:13px; font-weight:600; letter-spacing:.1em; color:var(--on-dark-label); margin-bottom:20px; }
-  .dg-axiom__text{ margin:0; font-size:clamp(20px,2.6vw,28px); font-weight:600; line-height:1.6; letter-spacing:-.02em; color:var(--on-dark-body); }
-  .dg-axiom__text strong{ color:#fff; font-weight:700; }
-  .dg-axiom__src{ margin:22px 0 0; font-size:12.5px; line-height:1.7; color:var(--on-dark-label); }
-  .dg-why-conclusion{ margin-top:76px; max-width:880px; }
-  .dg-why-conclusion h2{ margin:0; }
-  .dg-why-conclusion p{ margin:26px 0 0; font-size:19px; line-height:1.75; color:var(--on-dark-body); }
-  .dg-why-conclusion p strong{ color:#fff; font-weight:700; }
-  .dg-evidence{ margin-top:72px; padding-top:48px; border-top:1px solid var(--on-dark-rule); }
-  .dg-evidence__head{ max-width:760px; }
-  .dg-evidence__head h3{ margin:0; font-size:clamp(21px,2.6vw,27px); letter-spacing:-.02em; color:#fff; }
-  .dg-evidence__head p{ margin:18px 0 0; font-size:16px; line-height:1.75; color:var(--on-dark-body); }
-  .dg-evidence__head p strong{ color:#fff; font-weight:700; }
-  .dg-evidence__note{ margin:26px 0 0; font-size:12.5px; line-height:1.75; color:var(--on-dark-label); }
-  .dg-evidence__note strong{ color:#fff; font-weight:600; }
-  .dg-closing{ margin-top:64px; padding:40px; border:1px solid var(--on-dark-rule); border-radius:10px; background:rgba(255,255,255,.03); text-align:center; }
-  .dg-closing p{ margin:0; font-size:24px; font-weight:700; line-height:1.6; letter-spacing:-.02em; color:#fff; }
-  /* belief 다이버징 차트 */
-  .dg-belief { margin-top:36px; padding:30px 32px; background:rgba(255,255,255,.04); border:1px solid var(--on-dark-rule); border-radius:12px; }
-  .dg-belief__title { font-size:16px; line-height:1.6; color:var(--on-dark-body); }
-  .dg-belief__title strong { color:#fff; font-weight:700; }
-  .dg-belief__scale { display:flex; justify-content:space-between; margin:22px 0 8px; font-size:12px; color:var(--on-dark-label); }
-  .dg-belief__rows { display:flex; flex-direction:column; gap:12px; }
-  .dg-belief__row { display:grid; grid-template-columns:230px 1fr 56px; align-items:center; gap:16px; }
-  .dg-belief__lab { font-size:14px; font-weight:700; color:#fff; line-height:1.35; }
-  .dg-belief__lab em { display:block; font-style:normal; font-size:12px; font-weight:500; color:var(--on-dark-label); margin-top:3px; }
-  .dg-belief__track { position:relative; height:30px; background:rgba(255,255,255,.05); border-radius:6px; }
-  .dg-belief__track::before { content:''; position:absolute; left:50%; top:0; bottom:0; width:1px; background:rgba(255,255,255,.28); }
-  .dg-belief__bar { position:absolute; top:6px; bottom:6px; border-radius:4px; }
-  .dg-belief__bar--neg { right:50%; background:#eb6834; }
-  .dg-belief__bar--pos { left:50%; background:#9d8bff; }
-  .dg-belief__val { text-align:right; font-size:15px; font-weight:800; font-variant-numeric:tabular-nums; }
-  .dg-belief__val--neg { color:#f2895f; }
-  .dg-belief__val--pos { color:#b8abff; }
-  @media (max-width:768px){
-    br.dg-br-lg{ display:none; }
-    .dg-axiom{ padding-left:18px; }
-    .dg-why-conclusion{ margin-top:48px; }
-    .dg-why-conclusion p{ font-size:16px; }
-    .dg-evidence{ margin-top:48px; padding-top:32px; }
-    .dg-evidence__head p{ font-size:15px; }
-    .dg-closing{ margin-top:44px; padding:28px 22px; }
-    .dg-closing p{ font-size:clamp(18px,5vw,22px); }
-  }
-  @media (max-width:640px){
-    .dg-belief { padding:22px 18px; }
-    .dg-belief__row { grid-template-columns:1fr 44px; grid-template-areas:"lab lab" "track val"; row-gap:8px; }
-    .dg-belief__lab { grid-area:lab; }
-    .dg-belief__track { grid-area:track; }
-    .dg-belief__val { grid-area:val; }
-  }
   .hb-rolebar span.more{background:transparent;border-style:dashed;color:#a7adb6;}
 </style>
 <script type="application/ld+json">
@@ -585,22 +414,6 @@
   .hb-hleft>div[style*="inline-flex"]{}
   .hb-hleft [style*="display:flex;gap:12px"]{justify-content:center;}
 }
-.mq{overflow:hidden;width:100%;-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);}
-.mq__row{display:flex;gap:20px;width:max-content;}
-.mq__row--l{animation:mqL 60s linear infinite;}
-.mq__row--r{animation:mqR 60s linear infinite;margin-top:20px;}
-.mq:hover .mq__row{animation-play-state:paused;}
-@keyframes mqL{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-@keyframes mqR{from{transform:translateX(-50%)}to{transform:translateX(0)}}
-.mq__card{flex:none;width:340px;background:#fff;border:1px solid #e5e3d9;border-radius:14px;padding:26px 28px 22px;display:flex;flex-direction:column;box-shadow:0 6px 20px rgba(24,32,46,.04);}
-.mq__top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:16px;}
-.mq__tag{font-size:12.5px;font-weight:700;letter-spacing:.02em;color:#4b3fd6;background:#eef1f7;padding:5px 11px;border-radius:20px;white-space:nowrap;}
-.mq__q{font-family:Georgia,serif;font-size:34px;line-height:.6;color:#e5e3d9;font-weight:700;}
-.mq__quote{margin:0;font-size:15px;line-height:1.7;color:#18202e;flex:1;}
-.mq__by{padding-top:14px;border-top:1px solid #e5e3d9;margin-top:18px;}
-.mq__by b{display:block;font-size:13px;font-weight:700;color:#18202e;}
-.mq__by span{display:block;font-size:12px;color:#5a6573;margin-top:2px;}
-@media(prefers-reduced-motion:reduce){.mq{overflow-x:auto;-webkit-mask-image:none;mask-image:none;}.mq__row{animation:none;}}
 </style>
 </head>
 <body>
