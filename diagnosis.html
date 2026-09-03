@@ -554,7 +554,7 @@
   }
 
   /* HERO 스플릿 (v3 이식) */
-  .dg-hero__split { max-width:1180px; margin:0 auto; padding:64px 32px; display:grid; grid-template-columns:0.86fr 1.14fr; gap:52px; align-items:center; }
+  .dg-hero__split { max-width:1180px; margin:0 auto; padding:var(--sp) var(--gutter); display:grid; grid-template-columns:0.86fr 1.14fr; gap:52px; align-items:center; }
   .dg-hero__left { text-align:left; }
   .dg-hero__left .aq-h1 { margin:0; font-size:clamp(26px,3.2vw,42px); }
   .dg-hero__left .dg-hero__eyebrow { margin-bottom:22px; }
@@ -590,7 +590,7 @@
   .nm__scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
   table.nmT--fx { min-width: 700px; }
   @media (max-width:900px) {
-    .dg-hero__split { grid-template-columns:1fr; gap:36px; padding:48px 20px; }
+    .dg-hero__split { grid-template-columns:1fr; gap:36px; }
     .dg-hero__left { text-align:center; }
     .dg-hero__left .aq-h1, .dg-hero__left .dg-hero__sub p { text-align:center; }
     .dg-hero__left .dg-hero__actions { justify-content:center; }
