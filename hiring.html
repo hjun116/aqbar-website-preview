@@ -100,7 +100,7 @@
      (opt-in — replaces fixed px font-sizes in steps 2+)
      ================================================ */
   .aq-h1 { font-size: clamp(32px, 5vw,  55px); line-height: 1.2;  letter-spacing: -0.025em; font-weight: 700; margin: 0; }
-  .aq-h2 { font-size: clamp(26px, 4vw,  50px); line-height: 1.15; letter-spacing: -0.025em; font-weight: 700; margin: 0; }
+  .aq-h2 { font-size: clamp(24px, 3.4vw, 40px); line-height: 1.16; letter-spacing: -0.025em; font-weight: 700; margin: 0; }
   .aq-h3 { font-size: clamp(20px, 2.5vw,28px); line-height: 1.2;  letter-spacing: -0.02em;  font-weight: 700; margin: 0; }
   .aq-label {
     font-size: 14px; font-weight: 600;
@@ -516,8 +516,8 @@
       <div class="aq-problem-header" style="display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:end;margin-bottom:52px;">
         <div>
           <div style="font-family: 'Pretendard',sans-serif; font-size: 14px; font-weight: 600; letter-spacing: .12em; color: var(--accent); text-transform: uppercase; margin-bottom: 20px">01&nbsp;—&nbsp;시장의 문제</div>
-          <h2 style="margin: 0px; font-size: 46px; line-height: 1.12; letter-spacing: -0.03em; font-weight: 700;">이런 경험,<br>있으신가요?</h2>
-          <p style="margin: 22px 0px 0px; font-size: 20px; line-height: 1.65; color: var(--muted);">AI 서류가 일상이 되고 AX 교육이 대세가 된 지금,<br>문제는 채용에서 끝나지 않습니다.</p>
+          <h2 class="aq-h2">이런 경험,<br>있으신가요?</h2>
+          <p style="margin: 22px 0px 0px; font-size: 18px; line-height: 1.65; color: var(--muted);">AI 서류가 일상이 되고 AX 교육이 대세가 된 지금,<br>문제는 채용에서 끝나지 않습니다.</p>
         </div>
         <div style="padding-bottom:4px;">
           <div class="aq-problem-quote" style="background: var(--primary); border-radius: 10px; padding: 32px 40px; height: 100%; display: flex; flex-direction: column; justify-content: center; width: 520px">
@@ -610,23 +610,23 @@
       <div style="max-width:720px;">
         <div style="font-family: 'Pretendard',sans-serif; font-size: 14px; font-weight: 600; letter-spacing: .12em; color: var(--accent); text-transform: uppercase; margin-bottom: 16px">02&nbsp;— 솔루션 개요</div>
         <h2 class="aq-sol-h2" style="margin: 0px; font-size: 40px; line-height: 1.2; letter-spacing: -0.02em; font-weight: 700;">채용부터 재직까지,<br>하나의 기준으로 평가합니다.</h2>
-        <p style="margin: 20px 0px 0px; font-size: 19px; line-height: 1.7; color: var(--muted);">AQbar는 지원자와 재직자가 AI와 함께 실제 직무 과제를 해결하는 과정을 분석해, 문제를 정의하고, 판단하고, 해결하는 <strong style="color:var(--ink);font-weight:700;">기획력과 문제해결 역량</strong>을 정량적으로 측정합니다. 채용에서 확인한 역량은 입사 후에도 동일한 기준으로 이어집니다.</p>
+        <p style="margin: 20px 0px 0px; font-size: 18px; line-height: 1.7; color: var(--muted);">AQbar는 지원자와 재직자가 AI와 함께 실제 직무 과제를 해결하는 과정을 분석해, 문제를 정의하고, 판단하고, 해결하는 <strong style="color:var(--ink);font-weight:700;">기획력과 문제해결 역량</strong>을 정량적으로 측정합니다. 채용에서 확인한 역량은 입사 후에도 동일한 기준으로 이어집니다.</p>
         <p style="margin:26px 0 0;font-size:clamp(19px,2.1vw,23px);font-weight:700;color:var(--accent);letter-spacing:-.02em;line-height:1.45;white-space:nowrap;">채용 → 수습 → 재직, 사람을 보는 기준을 하나로 연결합니다.</p>
       </div>
       <div class="aq-sol-3grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:50px;border:1px solid var(--border);border-radius:8px;overflow:hidden;background:#fff;">
-        <div style="padding: 38px 34px; border-right: 1px solid var(--border); height: 200px;">
+        <div style="padding: 38px 34px; border-right: 1px solid var(--border);">
           <div style="font-family:'Pretendard',sans-serif;font-size:13px;font-weight:600;color:var(--accent);">01</div>
-          <h3 style="margin:18px 0 0;font-size:20px;font-weight:700;letter-spacing:-0.01em;">평가 세션 입장</h3>
+          <h3 style="margin:18px 0 0;font-size:32px;font-weight:700;letter-spacing:-0.01em;">평가 세션 입장</h3>
           <p style="margin:10px 0 0;font-size:14.5px;line-height:1.6;color:var(--muted);">지원자가 개인정보를 입력하고 폐쇄형 샌드박스 평가 세션에 입장합니다.</p>
         </div>
         <div style="padding:38px 34px;border-right:1px solid var(--border);">
           <div style="font-family:'Pretendard',sans-serif;font-size:13px;font-weight:600;color:var(--accent);">02</div>
-          <h3 style="margin:18px 0 0;font-size:20px;font-weight:700;letter-spacing:-0.01em;">AI와 협업해 태스크 수행</h3>
+          <h3 style="margin:18px 0 0;font-size:32px;font-weight:700;letter-spacing:-0.01em;">AI와 협업해 태스크 수행</h3>
           <p style="margin: 10px 0px 0px; font-size: 14.5px; line-height: 1.6; color: var(--muted);">제한된 시간 내 AI를 자유롭게 활용해 직무 태스크를 수행합니다.&nbsp;</p>
         </div>
         <div style="padding:38px 34px;">
           <div style="font-family:'Pretendard',sans-serif;font-size:13px;font-weight:600;color:var(--accent);">03</div>
-          <h3 style="margin:18px 0 0;font-size:20px;font-weight:700;letter-spacing:-0.01em;">결과물 작성 및 제출</h3>
+          <h3 style="margin:18px 0 0;font-size:32px;font-weight:700;letter-spacing:-0.01em;">결과물 작성 및 제출</h3>
           <p style="margin:10px 0 0;font-size:14.5px;line-height:1.6;color:var(--muted);">태스크 결과물을 제출하면, 24시간 내 평가 리포트가 산출됩니다.</p>
         </div>
       </div>
@@ -718,8 +718,8 @@
       <!-- header -->
       <div style="max-width:780px;">
         <div style="font-family: 'Pretendard',sans-serif; font-size: 14px; font-weight: 600; letter-spacing: .12em; color: var(--accent); text-transform: uppercase; margin-bottom: 16px">03 — 핵심 기능</div>
-        <h2 class="aq-feat-h2" style="margin: 0px; font-size: 39px; line-height: 1.2; letter-spacing: -0.02em; font-weight: 700;"><div style=""><span style="letter-spacing: -0.02em; color: var(--ink); font-size: 40px;">지원자의 사고 과정을 정량화하고<br>면접 검증으로 이어갑니다.&nbsp;</span></div></h2>
-        <p style="margin: 20px 0px 0px; font-size: 18px; line-height: 1.62; color: var(--muted);"></p><div class="aq-feat-p" style=""><div style="width: 1000px;"><span style="color: var(--muted); font-size: 20px;">기업과 직무에 맞춰 설계된 실무 시나리오 태스크를 통해,&nbsp;결과에서는 보이지 않던 지원자의 사고 역량을 평가합니다.<br>AI 협업 과정 데이터를 정밀 분석해 심층 역량 리포트와 맞춤형 면접 질문 가이드를 제공합니다.<br></span></div><div><span style="color: var(--muted);"></span></div></div><p></p>
+        <h2 class="aq-h2 aq-feat-h2">지원자의 사고 과정을 정량화하고<br>면접 검증으로 이어갑니다.&nbsp;</h2>
+        <p style="margin: 20px 0px 0px; font-size: 18px; line-height: 1.62; color: var(--muted);">기업과 직무에 맞춰 설계된 실무 시나리오 태스크를 통해,&nbsp;결과에서는 보이지 않던 지원자의 사고 역량을 평가합니다.<br>AI 협업 과정 데이터를 정밀 분석해 심층 역량 리포트와 맞춤형 면접 질문 가이드를 제공합니다.</p>
       </div>
 
       <!-- 3 capability summary -->
@@ -760,8 +760,8 @@
             <div style="font-family: 'Pretendard',sans-serif; font-size: 14px; font-weight: 600; letter-spacing: .12em; color: var(--accent); text-transform: uppercase; white-space: nowrap;">FEATURE 01. TASK DESIGN ENGINE</div>
             <div style="flex:1;height:1px;background:var(--accent);"></div>
           </div>
-          <h3 class="aq-feat01-h3" style="margin: 14px 0 0; font-size: 40px; line-height: 1.22; letter-spacing: -0.025em; font-weight: 700; text-align: center">채용 포지션마다 새롭게 설계되는<br>맞춤형 태스크</h3>
-          <p style="margin: 12px 0 0; font-size: 16px; line-height: 1.65; color: var(--muted); text-align: center">정형화된 문제은행 방식에서 벗어나, 오직 우리 기업·직무만을 위한<br>최적화된 평가 시나리오를 매번 새로 설계합니다.</p>
+          <h3 class="aq-feat01-h3" style="margin: 14px 0 0; font-size: 32px; line-height: 1.22; letter-spacing: -0.025em; font-weight: 700; text-align: center">채용 포지션마다 새롭게 설계되는<br>맞춤형 태스크</h3>
+          <p style="margin: 12px 0 0; font-size: 18px; line-height: 1.65; color: var(--muted); text-align: center">정형화된 문제은행 방식에서 벗어나, 오직 우리 기업·직무만을 위한<br>최적화된 평가 시나리오를 매번 새로 설계합니다.</p>
         </div>
 
         <!-- LABELS ROW -->
@@ -849,7 +849,7 @@
             <div style="flex:1;height:1px;background:var(--accent);"></div>
           </div>
           <h3 style="margin: 24px 0 0; font-size: 32px; line-height: 1.2; letter-spacing: -0.02em; font-weight: 700; text-align: center">7개 핵심 평가 지표</h3>
-          <p style="margin: 14px auto 0; font-size: 15px; line-height: 1.65; color: var(--muted); max-width: 640px; text-align: center;" data-comment-anchor="9c8677219c-p">AI와 상호작용하는 과정에서 드러나는 7개 지표로 문제해결 역량을 정량 측정합니다.<br>모든 지표는 인지과학·교육심리학·역량평가론의 검증된 연구를 바탕으로 설계되었습니다.</p>
+          <p style="margin: 14px auto 0; font-size: 18px; line-height: 1.65; color: var(--muted); max-width: 640px; text-align: center;" data-comment-anchor="9c8677219c-p">AI와 상호작용하는 과정에서 드러나는 7개 지표로 문제해결 역량을 정량 측정합니다.<br>모든 지표는 인지과학·교육심리학·역량평가론의 검증된 연구를 바탕으로 설계되었습니다.</p>
         </div>
         <div style="border:1px solid var(--border);border-radius:10px;overflow:hidden;background:#fff;">
           <div class="aq-feat-4grid" style="display:grid;grid-template-columns:repeat(4,1fr);">
@@ -937,8 +937,8 @@
         </div>
         <!-- centered header -->
         <div style="max-width:760px;margin:0 auto;">
-          <h3 style="margin:0;font-size:28px;line-height:1.25;letter-spacing:-0.02em;font-weight:700;text-align:center;">24시간 내, 정량 평가 리포트 &amp; 면접 가이드</h3>
-          <p style="margin:16px 0 0;font-size:16px;line-height:1.65;color:var(--muted);text-align:center;">수집된 사고 데이터를 7개 핵심 지표로 분석해 AQbar Score로 산출하고,&nbsp;면접에서 검증할 주요 포인트까지 연결합니다.</p>
+          <h3 style="margin:0;font-size:32px;line-height:1.25;letter-spacing:-0.02em;font-weight:700;text-align:center;">24시간 내, 정량 평가 리포트 &amp; 면접 가이드</h3>
+          <p style="margin:16px 0 0;font-size:18px;line-height:1.65;color:var(--muted);text-align:center;">수집된 사고 데이터를 7개 핵심 지표로 분석해 AQbar Score로 산출하고,&nbsp;면접에서 검증할 주요 포인트까지 연결합니다.</p>
         </div>
 
         <!-- bullet badges row -->
@@ -1083,7 +1083,7 @@
     <div style="max-width:1120px;margin:0 auto;padding:var(--sp) var(--gutter);">
       <div style="max-width:720px;">
         <div style="font-family: 'Pretendard',sans-serif; font-size: 14px; font-weight: 600; letter-spacing: .12em; color: #7f9fe0; text-transform: uppercase; margin-bottom: 16px">04 — 솔루션 도입 기대효과</div>
-        <h2 style="margin:0;font-size:39px;line-height:1.2;letter-spacing:-0.02em;font-weight:700;color:#fff;">평가 방식을 바꾸면,<br>채용 의사결정이 달라집니다.</h2>
+        <h2 class="aq-h2" style="color:#fff;">평가 방식을 바꾸면,<br>채용 의사결정이 달라집니다.</h2>
         <p class="aq-impact-p" style="margin: 20px 0 0; font-size: 18px; line-height: 1.62; color: #aebfd6; width: 765px; height: 57px">AQbar는 단순한 평가 도구가 아닌, 조직의 인재 데이터 인프라입니다. <br>더 빠르게, 더 정확하게, 더 공정하게 선별합니다.</p>
       </div>
       <div class="aq-impact-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:36px;margin-top:54px;">
@@ -1092,7 +1092,7 @@
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7f9fe0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
             DATA
           </div>
-          <h3 style="margin:14px 0 0;font-size:22px;font-weight:700;color:#fff;">채용 의사결정 객관성 향상</h3>
+          <h3 style="margin:14px 0 0;font-size:20px;font-weight:700;color:#fff;">채용 의사결정 객관성 향상</h3>
           <ul style="margin:16px 0 0;padding-left:18px;color:#aebfd6;font-size:14px;line-height:1.85;list-style-type:disc;">
             <li>루브릭 기반 일관된 채점 근거</li>
             <li style="">근거 기반 핵심 역량 파악</li>
@@ -1104,7 +1104,7 @@
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7f9fe0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15 15"></polyline></svg>
             TIME
           </div>
-          <h3 style="margin:14px 0 0;font-size:22px;font-weight:700;color:#fff;">면접 운영 효율 극대화</h3>
+          <h3 style="margin:14px 0 0;font-size:20px;font-weight:700;color:#fff;">면접 운영 효율 극대화</h3>
           <ul style="margin:16px 0 0;padding-left:18px;color:#aebfd6;font-size:14px;line-height:1.85;list-style-type:disc;">
             <li>직무 미적합 지원자 사전 스크리닝</li>
             <li>후보자당 면접 준비 시간 40% 이상 단축</li>
@@ -1116,7 +1116,7 @@
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7f9fe0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="6" height="5" rx="1"></rect><rect x="16" y="7" width="6" height="5" rx="1"></rect><rect x="9" y="1" width="6" height="5" rx="1"></rect><line x1="5" y1="12" x2="5" y2="17"></line><line x1="19" y1="12" x2="19" y2="17"></line><line x1="12" y1="6" x2="12" y2="17"></line><line x1="5" y1="17" x2="19" y2="17"></line></svg>
             ORGANIZATION
           </div>
-          <h3 style="margin:14px 0 0;font-size:22px;font-weight:700;color:#fff;">채용 이후까지 이어지는 역량 데이터</h3>
+          <h3 style="margin:14px 0 0;font-size:20px;font-weight:700;color:#fff;">채용 이후까지 이어지는 역량 데이터</h3>
           <ul style="margin:16px 0 0;padding-left:18px;color:#aebfd6;font-size:14px;line-height:1.85;list-style-type:disc;">
             <li>사내 역량 벤치마크 구축</li>
             <li>직무·직급·부서별 역량 패턴 분석</li>
@@ -1134,14 +1134,14 @@
       <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;">
         <div style="max-width:640px;">
           <div style="font-family: 'Pretendard',sans-serif; font-size: 14px; font-weight: 600; letter-spacing: .12em; color: var(--accent); text-transform: uppercase; margin-bottom: 16px">05 — 솔루션 도입 프로세스</div>
-          <h2 class="aq-onboard-h2" style="margin: 0px; font-size: 38px; line-height: 1.22; letter-spacing: -0.02em; font-weight: 700;">JD 수령 후 채용 프로세스 도입까지,<br>단, 3주</h2>
+          <h2 class="aq-h2 aq-onboard-h2">JD 수령 후 채용 프로세스 도입까지,<br>단, 3주</h2>
         </div>
         <div style="font-family: Pretendard; font-size: 15px; color: var(--muted)">&nbsp;※ 전담팀 밀착 지원</div>
       </div>
       <div class="aq-onboard-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px;">
         <div style="border:1px solid var(--border);border-radius:8px;padding:30px 28px;background:#fff;">
           <div style="display:flex;align-items:center;justify-content:space-between;"><span style="font-family:'Pretendard',sans-serif;font-size:12px;font-weight:600;color:var(--accent);letter-spacing:.08em;">WEEK 01</span></div>
-          <h3 style="margin:16px 0 0;font-size:19px;font-weight:700;">평가 기준 및 태스크 설계</h3>
+          <h3 style="margin:16px 0 0;font-size:20px;font-weight:700;">평가 기준 및 태스크 설계</h3>
           <ul style="margin:14px 0 0;padding-left:18px;color:var(--muted);font-size:14px;line-height:1.85;list-style-type:disc;">
             <li>JD 및 기존 평가 체계 분석</li>
             <li>기업, 사업 모델, 경쟁사 현황 분석</li>
@@ -1150,7 +1150,7 @@
         </div>
         <div style="border:1px solid var(--border);border-radius:8px;padding:30px 28px;background:#fff;">
           <div style="display:flex;align-items:center;justify-content:space-between;"><span style="font-family:'Pretendard',sans-serif;font-size:12px;font-weight:600;color:var(--accent);letter-spacing:.08em;">WEEK 02</span></div>
-          <h3 style="margin:16px 0 0;font-size:19px;font-weight:700;">신뢰도 및 운영성 검증</h3>
+          <h3 style="margin:16px 0 0;font-size:20px;font-weight:700;">신뢰도 및 운영성 검증</h3>
           <ul style="margin:14px 0 0;padding-left:18px;color:var(--muted);font-size:14px;line-height:1.85;list-style-type:disc;">
             <li>내부 핵심 인재 대상 파일럿 진행</li>
             <li>점수 기준 및 면접 연계 검증</li>
@@ -1159,7 +1159,7 @@
         </div>
         <div style="border:1px solid var(--border);border-radius:8px;padding:30px 28px;background:#fff;">
           <div style="display:flex;align-items:center;justify-content:space-between;"><span style="font-family:'Pretendard',sans-serif;font-size:12px;font-weight:600;color:var(--accent);letter-spacing:.08em;">WEEK 03</span></div>
-          <h3 style="margin:16px 0 0;font-size:19px;font-weight:700;">채용 프로세스 적용</h3>
+          <h3 style="margin:16px 0 0;font-size:20px;font-weight:700;">채용 프로세스 적용</h3>
           <ul style="margin:14px 0 0;padding-left:18px;color:var(--muted);font-size:14px;line-height:1.85;list-style-type:disc;">
             <li>운영 환경 최종 적용 및 배치</li>
             <li>담당자 교육 및 운영 지원</li>
@@ -1176,8 +1176,8 @@
     <div style="max-width:1120px;margin:0 auto;padding:var(--sp) var(--gutter);">
       <div style="max-width:760px;margin:0 auto;text-align:center;">
         <div style="font-family:'Pretendard',sans-serif;font-size:14px;font-weight:600;letter-spacing:.12em;color:var(--accent);text-transform:uppercase;margin-bottom:16px;">06 — 가격 플랜</div>
-        <h2 style="margin:0;font-size:39px;line-height:1.2;letter-spacing:-0.02em;font-weight:700;">효율적인 채용을 위한&nbsp;플랜 선택</h2>
-        <p style="margin:18px 0 0;font-size:17px;line-height:1.6;color:var(--muted);">기업 규모와 채용 니즈에 최적화된 플랜을 제안합니다.<br>기업 환경에 따라 커스터마이징도 가능합니다.</p>
+        <h2 class="aq-h2">효율적인 채용을 위한&nbsp;플랜 선택</h2>
+        <p style="margin:18px 0 0;font-size:18px;line-height:1.6;color:var(--muted);">기업 규모와 채용 니즈에 최적화된 플랜을 제안합니다.<br>기업 환경에 따라 커스터마이징도 가능합니다.</p>
       </div>
 
       <div class="aq-pricing-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px;align-items:stretch;">
@@ -1185,7 +1185,7 @@
         <!-- Plan 1 -->
         <div style="position:relative;border:1px solid var(--border);border-radius:12px;padding:34px 30px;background:#fff;display:flex;flex-direction:column;">
           <div style="font-family:'Pretendard',sans-serif;font-size:12px;font-weight:600;color:var(--accent);letter-spacing:.08em;">PLAN 01</div>
-          <h3 style="margin:14px 0 0;font-size:21px;font-weight:700;letter-spacing:-0.01em;">PAY-AS-YOU-GO 플랜</h3>
+          <h3 style="margin:14px 0 0;font-size:20px;font-weight:700;letter-spacing:-0.01em;">PAY-AS-YOU-GO 플랜</h3>
           <p style="margin:12px 0 0;font-size:14.5px;line-height:1.65;color:var(--muted);">유연한 결제를 원하는 기업에게 추천합니다.</p>
           <ul style="margin:14px 0 0;padding-left:18px;color:var(--muted);font-size:14px;line-height:1.85;list-style-type:disc;">
             <li>기본 단가 적용</li>
@@ -1197,7 +1197,7 @@
         <div style="position:relative;border:1px solid var(--primary);border-radius:12px;padding:34px 30px;background:#fff;display:flex;flex-direction:column;box-shadow:0 18px 40px -24px rgba(26,55,120,0.35);">
           <div style="position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--primary);color:#fff;font-family:'Pretendard',sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;padding:6px 12px;border-radius:4px;">MOST POPULAR</div>
           <div style="font-family:'Pretendard',sans-serif;font-size:12px;font-weight:600;color:var(--accent);letter-spacing:.08em;">PLAN 02</div>
-          <h3 style="margin:14px 0 0;font-size:21px;font-weight:700;letter-spacing:-0.01em;">사용량 기반 패키지 플랜</h3>
+          <h3 style="margin:14px 0 0;font-size:20px;font-weight:700;letter-spacing:-0.01em;">사용량 기반 패키지 플랜</h3>
           <p style="margin:12px 0 0;font-size:14.5px;line-height:1.65;color:var(--muted);">패키지 할인을 원하는 기업에게 추천합니다.</p>
           <ul style="margin:14px 0 0;padding-left:18px;color:var(--muted);font-size:14px;line-height:1.85;list-style-type:disc;">
             <li>50건 ~ 300건 패키지 선택</li>
@@ -1208,7 +1208,7 @@
         <!-- Plan 3 -->
         <div style="position:relative;border:1px solid var(--border);border-radius:12px;padding:34px 30px;background:#fff;display:flex;flex-direction:column;">
           <div style="font-family:'Pretendard',sans-serif;font-size:12px;font-weight:600;color:var(--accent);letter-spacing:.08em;">PLAN 03</div>
-          <h3 style="margin:14px 0 0;font-size:21px;font-weight:700;letter-spacing:-0.01em;">엔터프라이즈 플랜</h3>
+          <h3 style="margin:14px 0 0;font-size:20px;font-weight:700;letter-spacing:-0.01em;">엔터프라이즈 플랜</h3>
           <p style="margin:12px 0 0;font-size:14.5px;line-height:1.65;color:var(--muted);">커스터마이징이 필요한 기업에게&nbsp;추천합니다.</p>
           <ul style="margin:14px 0 0;padding-left:18px;color:var(--muted);font-size:14px;line-height:1.85;list-style-type:disc;">
             <li>300건 이상 대규모 채용 평가 지원</li>
@@ -1228,7 +1228,7 @@
 
       <h2 style="margin: 0 auto; font-size: 40px; line-height: 1.22; letter-spacing: -0.025em; font-weight: 700; color: #fff; max-width: 760px">우리 조직과 직무에 맞는 평가 방식인지<br>직접 확인해 보세요.</h2>
 
-      <p style="margin:20px auto 0;max-width:560px;font-size:17px;line-height:1.7;color:#aebfd6;">플랜·가격과 도입 방식은 조직 상황에 맞춰 안내해 드립니다.</p>
+      <p style="margin:20px auto 0;max-width:560px;font-size:18px;line-height:1.7;color:#aebfd6;">플랜·가격과 도입 방식은 조직 상황에 맞춰 안내해 드립니다.</p>
       <div style="margin:34px auto 0;">
         <a href="index.html#contact" style="display:inline-block;padding:16px 34px;font-size:15.5px;font-weight:700;color:var(--primary);background:#fff;border-radius:6px;text-decoration:none;letter-spacing:-.01em;">채용 평가 문의하기 →</a>
       </div>
