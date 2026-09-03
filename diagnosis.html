@@ -594,7 +594,6 @@
     .dg-hero__left .aq-h1, .dg-hero__left .dg-hero__sub p { text-align:center; }
     .dg-hero__left .dg-hero__actions { justify-content:center; }
     .dg-hero__left .dg-hero__sub { margin-left:auto; margin-right:auto; }
-    .dg-hero__right { order:-1; }
   }
 
   /* ===== v11: 섹션 배경 리듬 재정립(Research 삭제 반영) ===== */
@@ -751,6 +750,25 @@
     .wbx .ap__cols{grid-template-columns:1fr;}
     .wbx .sl__side{grid-template-columns:1fr;}
   }
+
+  /* 맨 위로 - 밝은 섹션과 남색 섹션을 번갈아 지나므로 흰 원 + 그림자로 양쪽 모두에서 보이게 한다 */
+  .mn-top{
+    position:fixed;right:28px;bottom:28px;z-index:45;
+    width:46px;height:46px;padding:0;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    background:#fff;color:var(--primary-deep);
+    border:1px solid rgba(13,35,66,.12);
+    box-shadow:0 4px 16px rgba(13,35,66,.18);
+    cursor:pointer;font-family:inherit;
+    opacity:0;visibility:hidden;transform:translateY(8px);
+    transition:opacity .25s,transform .25s,visibility .25s,background .15s,box-shadow .15s;
+  }
+  .mn-top.on{opacity:1;visibility:visible;transform:none;}
+  .mn-top:hover{background:#eef1f7;box-shadow:0 6px 20px rgba(13,35,66,.24);}
+  .mn-top:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+  .mn-top svg{width:18px;height:18px;display:block;}
+  @media(max-width:768px){ .mn-top{right:16px;bottom:16px;width:42px;height:42px;} }
+  @media(prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} .mn-top{transition:none;} }
 </style>
 </head>
 <body>
@@ -1628,6 +1646,31 @@
   } else {
     fitDgHero();
   }
+})();
+</script>
+<button type="button" class="mn-top" aria-label="맨 위로 이동">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script>
+/* 맨 위로 버튼: 히어로를 지난 뒤에만 나타난다 */
+(function(){
+  var btn = document.querySelector('.mn-top');
+  if(!btn) return;
+  var shown = false, queued = false;
+  function tick(){
+    queued = false;
+    var on = (window.pageYOffset || document.documentElement.scrollTop) > 600;
+    if(on !== shown){ shown = on; btn.classList.toggle('on', on); }
+  }
+  window.addEventListener('scroll', function(){
+    if(!queued){ queued = true; requestAnimationFrame(tick); }
+  }, {passive:true});
+  btn.addEventListener('click', function(){
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({top:0, behavior: reduce ? 'auto' : 'smooth'});
+  });
+  tick();
 })();
 </script>
 </body></html>
