@@ -10,13 +10,7 @@
 <meta name="robots" content="noindex, nofollow">
 <title>AQbar(에이큐바) - 일 잘하는 사람을, 숫자로 정의합니다</title>
 <meta name="description" content="AQbar는 지원자와 재직자가 AI와 함께 실제 직무 과제를 푸는 과정을 7개 지표로 분석해, '일 잘하는 사람'을 숫자로 정의합니다. 채용 평가와 조직 역량 진단을 하나의 기준으로.">
-<!-- PREVIEW ONLY: 검증용 배포라 검색 색인을 막는다. aqbar.ai 전환 시 이 두 줄 제거 -->
-<meta name="robots" content="noindex, nofollow">
 <link rel="canonical" href="https://aqbar.ai/">
-<link rel="icon" href="favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="96x96" href="favicon-96.png">
-<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
-<link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png">
 <meta property="og:site_name" content="AQbar(에이큐바)">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:title" content="우리 회사에서 '일 잘하는 사람', 정확히 어떤 사람입니까?">
@@ -58,12 +52,6 @@
   @media(max-width:768px){br.mn-br-lg{display:none;}}
   br.mn-br-mo{display:none;}
   @media(max-width:768px){br.mn-br-mo{display:inline;}}
-  /* 강조 유틸 (전 화면 공통) */
-  .mn-em-strong{font-weight:700;color:#fff;}
-  .mn-em-accent{color:#9d8bff !important;} /* 기존 b 색 규칙보다 명시도가 낮아 필요 */
-  @media(max-width:768px){
-    .mn-legal-sep{display:none;}
-  }
   /* 좁은 데스크톱에서 줄이 넘쳐 두 글자짜리 고아 줄이 생기는 긴 문장용 */
   @media(max-width:960px){br.mn-br-xl{display:none;}}
 
@@ -390,9 +378,7 @@
     br.dg-br-lg{ display:none; }
     .dg-axiom{ padding-left:18px; } .dg-why-conclusion{ margin-top:48px; } .dg-why-conclusion p{ font-size:16.5px; }
     .dg-evidence{ margin-top:48px; padding-top:32px; } .dg-evidence__head p{ font-size:15px; }
-    /* '결국 중요한 것은 / ...아니라, / ...입니다' 세 토막이 각각 한 줄에 들어가는
-       최대 크기를 폭별로 실측해 맞췄다. 굵기·색으로 위계는 유지된다 */
-    .dg-closing{ margin-top:44px; padding:24px 16px; } .dg-closing p{ font-size:clamp(12px,calc(5.8vw - 6.5px),19px); }
+    .dg-closing{ margin-top:44px; padding:28px 22px; } .dg-closing p{ font-size:clamp(18px,5vw,22px); }
   }
 
   /* ===== 후기 마퀴 (이식) ===== */
@@ -805,8 +791,7 @@
     /* H3 단계는 19px 로 모은다 (.mn-life__title 과 같은 값) */
     .mn-evi__hl{font-size:19px !important;}
     .dg-evidence__head h3{font-size:19px;}             /* clamp 로 21 */
-    /* 세 토막이 각각 한 줄에 들어가는 최대 크기 (폭별 실측) */
-    .dg-closing p{font-size:clamp(12px,calc(5.8vw - 6.5px),19px);}
+    .dg-closing p{font-size:19px;}                     /* clamp 로 18.8 */
     .dg-belief__title{font-size:15.5px;}               /* 16 -> 본문 */
     .mn-hflow__step b{font-size:15.5px;}               /* 16 -> 본문 */
 
@@ -871,7 +856,7 @@
         <span class="on">PM/PO</span><span>그로스 마케터</span><span>전략기획</span><span>사업개발</span><span>글로벌 MD</span><span>B2B 세일즈</span><span>브랜드 마케터</span><span>콘텐츠 기획</span><span class="more">…그리고 귀사의 직무 무엇이든</span>
       </div>
       <div class="mn-hero__sub">
-        <p class="mn-hero__def">이 질문에 답하려면 기준이 필요합니다. <br class="mn-br-mo">AQbar의 기준은 ‘문제해결 능력’입니다.</p>
+        <p class="mn-hero__def">이 질문에 답하려면 기준이 필요합니다. AQbar의 기준은 ‘문제해결 능력’입니다.</p>
         <p>스펙도, 이력서도, 자기소개서도, 포트폴리오도 답해주지 않습니다.</p>
         <p>AQbar는 <strong>AI와 함께 실무 과제를 풀어내는 과정</strong>에서 <strong>‘문제해결 능력’</strong>을 측정합니다.</p>
       </div>
@@ -895,7 +880,7 @@
       <div class="mn-head">
         <div class="aq-label">ONE STANDARD <span style="display:inline-block;">- 채용의 기준을, 입사 후에도</span></div>
         <h2 class="aq-h2">채용과 성과를 연결하려면,<br><span style="color:#9d8bff;">하나의 기준</span>이 필요합니다.</h2>
-        <p class="mn-lead">AQbar는 <b>채용부터 재직까지 하나의 기준</b>으로 사람의 판단과 문제해결 과정을 측정합니다. <br class="mn-br-lg">같은 기준으로 계속 측정해야 <span class="mn-em-strong">역량이 어떻게 변하고 성장</span>했는지 알 수 있습니다.</p>
+        <p class="mn-lead">AQbar는 <b>채용부터 재직까지 하나의 기준</b>으로 사람의 판단과 문제해결 과정을 측정합니다. <br class="mn-br-lg">같은 기준으로 계속 측정해야 역량이 어떻게 변하고 성장했는지 알 수 있습니다.</p>
       </div>
 
       <!-- 하나의 기준: EMPLOYEE LIFE CYCLE (원형을 잠시 보여준 뒤 직선으로 풀림) -->
@@ -924,6 +909,8 @@
           <p class="mn-life__hint">잠시 후, 이 사이클이 하나의 시간축으로 펼쳐집니다</p>
         </div>
 
+        <p class="mn-life__how">공고에서는 역량을 정의하고, 채용에서는 그 역량을 확인합니다. <br class="mn-br-lg">그리고 온보딩부터 성과관리까지, 그 역량이 어떻게 발휘되고 성장하는지 이어서 봐야 합니다.</p>
+
         <ul class="mn-life__list">
           <li><i style="background:#6b5cf0;"></i><span><span class="en">Attraction</span><span class="ko">JD · 공고</span></span><span class="tag">측정</span></li>
           <li><i style="background:#6b5cf0;"></i><span><span class="en">Recruitment</span><span class="ko">채용</span></span><span class="tag">측정</span></li>
@@ -933,8 +920,6 @@
           <li data-off><i style="background:#2f4767;"></i><span><span class="en">Retention</span><span class="ko">리텐션</span></span><span class="tag">해당 없음</span></li>
           <li data-off><i style="background:#2f4767;"></i><span><span class="en">Offboarding</span><span class="ko">오프보딩</span></span><span class="tag">해당 없음</span></li>
         </ul>
-
-        <p class="mn-life__how">공고에서는 역량을 정의하고, 채용에서는 그 역량을 확인합니다. <br class="mn-br-lg">그리고 온보딩부터 성과관리까지, 그 역량이 어떻게 발휘되고 성장하는지 이어서 봐야 합니다.</p>
 
         <p class="mn-life__note"><b>채용의 판단과 입사 후 성과가 연결될 때, 비로소 채용의 결과를 확인할 수 있습니다.</b></p>
       </div>
@@ -1014,7 +999,7 @@
         <div class="mn-teaser__num">10건 중 <b>4건</b></div>
         <div class="mn-teaser__txt">
           <p><b>AI에 의존할수록, 스스로 의심하고 검증하는 힘이 약해집니다.</b></p>
-          <p>지식근로자의 실제 업무 936건 가운데 10건에 4건은 AI의 답이 <b class="mn-em-accent">별도 검증 없이 그대로</b> 쓰였습니다.</p>
+          <p>지식근로자의 실제 업무 936건 가운데 10건에 4건은 AI의 답이 <b>별도 검증 없이 그대로</b> 쓰였습니다.</p>
         </div>
         <span class="mn-teaser__src">Microsoft Research &times; Carnegie Mellon · CHI 2025 · 자세한 내용은 아래에서</span>
       </div>
@@ -1035,7 +1020,7 @@
     <div class="aq-sec">
       <div class="mn-sechead">
         <div class="aq-label">현장의 공통 과제</div>
-        <h2 class="aq-h2">채용과 육성, <br class="mn-br-mo">서로 다른 영역처럼 보이지만<br>결국 <span class="aq-accent">같은 문제</span>를 마주합니다.</h2>
+        <h2 class="aq-h2">채용과 육성, 서로 다른 영역처럼 보이지만<br>결국 <span class="aq-accent">같은 문제</span>를 마주합니다.</h2>
         <p class="mn-lead">채용에서든 육성에서든, 현장의 고민은 결국 한 곳에서 만납니다. <br class="mn-br-lg"><b>“이 사람, 스스로 판단하고 문제를 해결하며 일하고 있나?”</b> <br class="mn-br-lg">서류로도, 교육 이수율로도 답하기 어려운 질문입니다.</p>
       </div>
       <div class="mn-fork">
@@ -1328,7 +1313,7 @@
 
       <div class="dg-axiom" style="margin-top:44px;">
         <div class="dg-axiom__tag">자동화의 역설 · 1983</div>
-        <p class="dg-axiom__text">시스템을 자동화할수록, 사람에게 남는 역할은 <strong>더 중요해집니다.</strong><br>그런데 그 역할은 평소에 쓰이지 않기 때문에 <strong>조용히 무뎌집니다.</strong></p>
+        <p class="dg-axiom__text">시스템을 자동화할수록, 사람에게 남는 역할은 <strong>더 중요해집니다.</strong><br class="dg-br-lg">그런데 그 역할은 평소에 쓰이지 않기 때문에 <strong>조용히 무뎌집니다.</strong></p>
         <p class="dg-axiom__src">Lisanne Bainbridge, <em>Ironies of Automation</em> (1983) · 40여 년간 항공 · 원자력 · 의료 안전공학의 기초가 된 문헌</p>
       </div>
 
@@ -1370,7 +1355,7 @@
       </div>
 
       <div class="dg-closing">
-        <p>결국 중요한 것은 <br class="mn-br-mo">AI를 얼마나 잘 쓰느냐가 아니라,<br><span style="color:#9d8bff;">AI와 함께 얼마나 잘 판단하느냐</span>입니다.</p>
+        <p>결국 중요한 것은 AI를 얼마나 잘 쓰느냐가 아니라,<br><span style="color:#9d8bff;">AI와 함께 얼마나 잘 판단하느냐</span>입니다.</p>
       </div>
     </div>
   </section>
@@ -1465,7 +1450,7 @@
     <div class="aq-sec">
       <div class="mn-cta__inner">
         <h2 class="aq-h2">우리 회사의 ‘일 잘하는 사람’,<br>기준부터 만들어 보세요.</h2>
-        <p class="mn-cta__lead">이제 실무에서 드러나는 문제해결 역량을 <br class="mn-br-mo">숫자로 확인해 보세요.</p>
+        <p class="mn-cta__lead">이제 실무에서 드러나는 문제해결 역량을 숫자로 확인해 보세요.</p>
 
         <form class="aq-contact-form mn-form" novalidate>
           <div class="mn-field">
@@ -1488,7 +1473,7 @@
         </form>
 
         <div class="mn-cta__help">
-          <p class="mn-cta__help-t">어디서부터 시작해야 할지 모르시겠다면</p>
+          <p class="mn-cta__help-t">어디서부터 시작해야 할지 <br class="mn-br-sm">모르시겠다면</p>
           <p class="mn-cta__help-d"><a href="mailto:info@aqbar.ai">info@aqbar.ai</a>로 지금 고민하고 계신 상황만 알려주세요. <br>AQbar가 적합한 방법부터 함께 제안해 드리겠습니다.</p>
         </div>
       </div>
@@ -1513,7 +1498,7 @@
         </div>
       </div>
       <div class="mn-footer__legal">
-        <span>주식회사 에이큐바&nbsp;|&nbsp;대표: 전혜선&nbsp;|&nbsp;<span style="white-space:nowrap">사업자등록번호: 527-87-03935</span><span class="mn-legal-sep">&nbsp;|&nbsp;</span><br class="mn-br-mo"><a href="/privacy">개인정보 처리방침</a></span>
+        <span>주식회사 에이큐바&nbsp;|&nbsp;대표: 전혜선&nbsp;|&nbsp;사업자등록번호: 527-87-03935&nbsp;|&nbsp;<a href="/privacy">개인정보 처리방침</a></span>
         <span>© 2026 AQbar. All rights reserved.</span>
       </div>
     </div>
