@@ -374,6 +374,9 @@
 
   .hb-rolebar span.more{background:transparent;border-style:dashed;color:#a7adb6;}
 
+  br.mn-br-mo{display:none;}
+  @media(max-width:768px){br.mn-br-mo{display:inline;}}
+
   /* FOOTER (메인·조직진단과 동일) */
   .mn-footer{background:var(--primary-deep);color:#aebfd6;}
   .mn-footer__inner{max-width:var(--container);margin:0 auto;padding:54px var(--gutter) 40px;}
@@ -1248,7 +1251,7 @@
         </div>
       </div>
       <div class="mn-footer__legal">
-        <span>주식회사 에이큐바&nbsp;|&nbsp;대표: 전혜선&nbsp;|&nbsp;사업자등록번호: 527-87-03935&nbsp;|&nbsp;<a href="/privacy.html">개인정보 처리방침</a></span>
+        <span>주식회사 에이큐바&nbsp;|&nbsp;대표: 전혜선&nbsp;|&nbsp;사업자등록번호: 527-87-03935&nbsp;|&nbsp;<br class="mn-br-mo"><a href="/privacy.html">개인정보 처리방침</a></span>
         <span>© 2026 AQbar. All rights reserved.</span>
       </div>
     </div>
