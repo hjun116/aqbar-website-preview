@@ -75,9 +75,29 @@
   .mn-header__inner{max-width:1120px;margin:0 auto;padding:0 var(--gutter);height:68px;display:flex;align-items:center;justify-content:space-between;gap:28px;}
   .mn-logo{display:flex;align-items:center;flex:none;line-height:0;}
   .mn-logo img{height:30px;width:auto;display:block;}
+  .aq-nav-links{display:flex;align-items:center;gap:30px;font-size:15px;font-weight:500;}
+  .aq-nav-links a{color:rgba(255,255,255,.75);text-decoration:none;transition:color .15s;white-space:nowrap;}
+  .aq-nav-links a:hover{color:#fff;}
+  .aq-nav-sep{width:1px;height:16px;background:rgba(255,255,255,.22);margin:0 6px;flex:none;}
+  .aq-nav-links a.aq-nav-out{color:#fff;font-weight:700;}
+  .aq-nav-links a.aq-nav-out:hover{color:rgba(255,255,255,.75);}
+  .aq-nav-out__arrow{font-size:13px;margin-left:1px;}
   .aq-nav-cta{display:flex;align-items:center;gap:12px;flex:none;white-space:nowrap;}
   .aq-nav-cta a{font-size:14.5px;font-weight:600;color:var(--primary-deep);text-decoration:none;padding:10px 20px;background:#fff;border-radius:4px;transition:background .15s;}
   .aq-nav-cta a:hover{background:#c7d6ef;}
+  .aq-nav-toggle{display:none;background:none;border:1.5px solid rgba(255,255,255,.3);border-radius:6px;cursor:pointer;padding:7px 10px;color:#fff;flex-direction:column;gap:5px;flex:none;}
+  .aq-nav-toggle span{display:block;width:18px;height:2px;background:currentColor;border-radius:1px;transition:transform .22s,opacity .18s;}
+  .aq-nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .aq-nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0;transform:scaleX(0);}
+  .aq-nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+  @media(max-width:920px){
+    .aq-nav-links{display:none;position:absolute;top:68px;left:0;right:0;background:var(--primary-deep);flex-direction:column;align-items:stretch;gap:0;padding:4px 0 12px;border-bottom:1px solid rgba(255,255,255,.1);z-index:49;}
+    .aq-nav-links.open{display:flex;}
+    .aq-nav-links a{padding:13px 24px;font-size:15px;}
+    .aq-nav-sep{display:none;}
+    .aq-nav-toggle{display:flex;}
+    .aq-nav-cta{display:none;}
+  }
   @media (max-width: 480px) {
     :root { --gutter: 16px; }
   }
@@ -216,7 +236,14 @@
       <a href="index.html" class="mn-logo" aria-label="AQbar 홈으로">
         <img src="assets/aqbar-logo.png" alt="AQbar">
       </a>
-      <div class="aq-nav-cta"><a href="index.html#contact">PoC 신청하기</a></div>
+      <nav class="aq-nav-links">
+        <a href="index.html">홈</a>
+        <span class="aq-nav-sep" aria-hidden="true"></span>
+        <a class="aq-nav-out" href="hiring.html">채용 평가 <span class="aq-nav-out__arrow" aria-hidden="true">↗</span></a>
+        <a class="aq-nav-out" href="diagnosis.html">조직 진단 <span class="aq-nav-out__arrow" aria-hidden="true">↗</span></a>
+      </nav>
+      <button class="aq-nav-toggle" aria-label="메뉴 열기" aria-expanded="false" onclick="(function(b){var n=document.querySelector('.aq-nav-links');var o=n.classList.toggle('open');b.setAttribute('aria-expanded',String(o));})(this)"><span></span><span></span><span></span></button>
+      <div class="aq-nav-cta"><a href="index.html#contact">문의하기</a></div>
     </div>
   </header>
 
