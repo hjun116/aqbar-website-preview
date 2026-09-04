@@ -303,16 +303,11 @@
   /* ===== 연구 근거 (이식) ===== */
   #research .aq-label{ color:var(--on-dark-label); }
   #research .aq-h2{ color:#fff; }
-  .dg-axiom{ max-width:900px; padding-left:28px; border-left:3px solid var(--on-dark-label); }
-  .dg-axiom__tag{ font-family:'Pretendard',sans-serif; font-size:13px; font-weight:600; letter-spacing:.1em; color:var(--on-dark-label); margin-bottom:20px; }
-  .dg-axiom__text{ margin:0; font-size:clamp(20px,2.6vw,28px); font-weight:600; line-height:1.6; letter-spacing:-.02em; color:var(--on-dark-body); }
-  .dg-axiom__text strong{ color:#fff; font-weight:700; }
-  .dg-axiom__src{ margin:22px 0 0; font-size:12.5px; line-height:1.7; color:var(--on-dark-label); }
   .dg-why-conclusion{ margin-top:76px; max-width:880px; }
   .dg-why-conclusion h2{ margin:0; }
   .dg-why-conclusion p{ margin:26px 0 0; font-size:18px; line-height:1.75; color:var(--on-dark-body); }
   .dg-why-conclusion p strong{ color:#fff; font-weight:700; }
-  .dg-evidence{ margin-top:40px; padding-top:28px; border-top:1px solid var(--on-dark-rule); }
+  .dg-evidence{ margin-top:40px; }
   .dg-evidence__head{ max-width:760px; }
   .dg-evidence__head h3{ margin:0; font-size:clamp(21px,2.6vw,27px); letter-spacing:-.02em; color:#fff; }
   .dg-evidence__head p{ margin:18px 0 0; font-size:18px; line-height:1.75; color:var(--on-dark-body); }
@@ -363,9 +358,8 @@
     .dg-belief__lab { grid-area:lab; } .dg-belief__track { grid-area:track; } .dg-belief__val { grid-area:val; }
   }
   @media (max-width:768px){
-    br.dg-br-lg{ display:none; }
-    .dg-axiom{ display:none; } .dg-why-conclusion{ margin-top:48px; } .dg-why-conclusion p{ font-size:15px; }
-    .dg-evidence{ margin-top:48px; padding-top:32px; } .dg-evidence__head p{ font-size:15px; }
+    .dg-why-conclusion{ margin-top:48px; } .dg-why-conclusion p{ font-size:15px; }
+    .dg-evidence{ margin-top:36px; } .dg-evidence__head p{ font-size:15px; }
     .dg-evidence__note{ font-size:11.5px; }
     .dg-closing{ margin-top:44px; } .dg-closing p{ font-size:clamp(18px,5vw,22px); }
   }
@@ -792,7 +786,7 @@
     /* --- 3단계: 라벨 12.5/600, 보조·출처 12.5/400 --- */
     .aq-label{font-size:12.5px;letter-spacing:.1em;margin-bottom:14px;}
     .mn-life__cap{font-size:12.5px;font-weight:600;}
-    .mn-forkcard__tag, .dg-axiom__tag{font-size:12.5px;}
+    .mn-forkcard__tag{font-size:12.5px;}
     .mn-footer__label{font-size:12.5px;font-weight:600;}
     .mn-evi p.mn-evi__src{font-size:12.5px;}           /* 11.5 -> 보조 */
     .mn-teaser__src{font-size:12.5px;}                 /* 12 -> 보조 */
@@ -1364,12 +1358,6 @@
         <div class="aq-label">RESEARCH</div>
         <h2 class="aq-h2">그 문제해결 능력을 가르는 건,<br>개인의 고유한 <span style="color:#9d8bff;">‘판단’</span>입니다.</h2>
         <p>AI는 검색하고 분석하고 작성하고 실행합니다. <br class="mn-br-lg">그러나 <strong>무엇을 해야 하는지 정의하고, 무엇이 맞는지 판단하고, 검증을 통해 그 답을 수정하는 것</strong>은 <br class="mn-br-xl">여전히 사람의 몫입니다.</p>
-      </div>
-
-      <div class="dg-axiom" style="margin-top:44px;">
-        <div class="dg-axiom__tag">자동화의 역설 · 1983</div>
-        <p class="dg-axiom__text">시스템을 자동화할수록, 사람에게 남는 역할은 <strong>더 중요해집니다.</strong><br class="dg-br-lg">그런데 그 역할은 평소에 쓰이지 않기 때문에 <strong>조용히 무뎌집니다.</strong></p>
-        <p class="dg-axiom__src">Lisanne Bainbridge, <em>Ironies of Automation</em> (1983) · 40여 년간 항공 · 원자력 · 의료 안전공학의 기초가 된 문헌</p>
       </div>
 
       <div class="dg-evidence">
