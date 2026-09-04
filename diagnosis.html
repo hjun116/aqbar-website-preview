@@ -127,12 +127,6 @@
     br.dg-br-lg { display: none; }
   }
 
-  /* 모바일에서만 적용되는 줄바꿈 */
-  br.dg-br-mo { display: none; }
-  @media (max-width: 768px) {
-    br.dg-br-mo { display: inline; }
-  }
-
   /* ================================================
      4. NAV
      ⚠️ 인라인 style 로 색을 지정하지 않는다.
@@ -506,7 +500,7 @@
   /* §01 성과 방정식 (AI 활용 역량 vs 문제해결 역량) */
   .dg-eq { margin-top:28px; padding:34px 36px 30px; background:#fff; border:1px solid var(--border); border-radius:16px; }
   .dg-eq__label { display:flex; align-items:center; gap:10px; font-size:13px; font-weight:700; letter-spacing:.12em; color:var(--accent); text-transform:uppercase; }
-  .dg-eq__headline { margin:18px 0 0; font-size:26px; font-weight:800; line-height:1.5; letter-spacing:-.02em; color:var(--ink); max-width:640px; }
+  .dg-eq__headline { margin:18px 0 0; font-size:36px; font-weight:800; line-height:1.5; letter-spacing:-.02em; color:var(--ink); max-width:640px; }
   .dg-eq__headline span { color:var(--accent); }
   .dg-eq__chart { margin-top:32px; }
   .dg-eq__chart svg { width:100%; height:auto; display:block; }
@@ -521,7 +515,7 @@
 
   @media (max-width: 768px) {
     .dg-eq { margin-top:24px; padding:26px 20px 22px; }
-    .dg-eq__headline { font-size:clamp(19px,5.5vw,23px); }
+    .dg-eq__headline { font-size:18px; font-weight:700; }
     .dg-eq__disclaimer { padding-left:0 !important; }
     .dg-story      { margin-top:40px; padding:26px 20px; border-radius:12px; }
     .dg-flow { margin-top:36px; padding:32px 20px 28px; border-radius:10px; }
@@ -1025,7 +1019,7 @@
 
       <div class="dg-eq">
         <div class="dg-eq__label">AI 시대의 새로운 성과 방정식</div>
-        <h3 class="dg-eq__headline">AI 활용 역량이 단기적인 생산성을 높인다면, <br class="dg-br-mo">문제해결 역량은 장기적인 성과를 만듭니다.</h3>
+        <h3 class="dg-eq__headline">AI 활용 역량이 단기적인 생산성을 높인다면,<br>문제해결 역량은 장기적인 성과를 만듭니다.</h3>
 
         <div class="dg-eq__chart">
           <svg viewBox="0 -55 1040 560" role="img" aria-label="AI 활용 생산성은 도입 초기에 빠르게 오르다 정체되고, AI를 검증 없이 맡기면 정확도가 하락하지만, 판단하며 사용하면 문제해결 역량 성과가 시간이 지날수록 함께 올라 결국 AI 활용 생산성을 크게 앞지르는 것을 보여주는 개념도">
