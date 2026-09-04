@@ -98,13 +98,13 @@
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       if (!isFormValid()) return;
-      submitToSheet(form, submitBtn, 'poc');
+      submitToSheet(form, submitBtn, 'diagnosis');
     });
 
     if (pricingBtn) {
       pricingBtn.addEventListener('click', function () {
         if (!isFormValid()) return;
-        submitToSheet(form, pricingBtn, 'pricing');
+        submitToSheet(form, pricingBtn, 'hiring');
       });
     }
 
