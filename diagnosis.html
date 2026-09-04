@@ -457,7 +457,7 @@
   .dg-scan__sec { position:relative; display:flex; align-items:baseline; justify-content:space-between; gap:14px; flex-wrap:wrap; margin:26px 0 14px; }
   .dg-scan__sec b { font-size:14px; font-weight:800; letter-spacing:.04em; color:var(--muted); }
   .dg-scan__sec span { font-size:12.5px; color:#a9a598; }
-  .dg-scan__note { position:relative; margin-top:26px; padding:28px 32px; background:var(--primary-deep); border-radius:12px; }
+  .dg-scan__note { position:relative; margin-top:26px; padding:28px; background:var(--primary-deep); border-radius:12px; }
   .dg-scan__note p { margin:0; font-size:clamp(17px,2vw,20px); font-weight:600; line-height:1.6; letter-spacing:-.015em; color:var(--on-dark-body); }
   .dg-scan__note p strong { color:#fff; font-weight:700; }
 
@@ -465,7 +465,6 @@
     .dg-scan { padding:26px 20px 24px; }
     .dg-scan__hd { flex-direction:column; }
     .dg-scan__meta { text-align:left; }
-    .dg-scan__note { padding:24px 22px; }
   }
 
   /* §01 신호 스캔 — 버전 B (좌: 보고되는 8항목 통합 리스트 / 우: 보고되지 않는 항목 경고형) */
@@ -517,7 +516,7 @@
   .dg-eq__disclaimer { margin-top:28px; padding-top:20px; border-top:1px solid #ece9df; font-size:12px; line-height:1.7; color:#a29e93; }
 
   /* §05 데이터 스토리 */
-  .dg-story { margin-top:60px; padding:44px; background:var(--primary-deep); border-radius:14px; color:#fff; }
+  .dg-story { margin-top:60px; padding:28px; background:var(--primary-deep); border-radius:14px; color:#fff; }
   .dg-story__head h3 { margin:0; font-size:clamp(23px,3.2vw,33px); font-weight:700; line-height:1.35; letter-spacing:-.025em; color:#fff; }
   .dg-story__head p { margin:18px 0 0; font-size:16.5px; line-height:1.75; color:var(--on-dark-body); }
   .dg-story__head p strong { color:#fff; font-weight:700; }
@@ -527,7 +526,7 @@
     .dg-eq { margin-top:24px; padding:26px 20px 22px; }
     .dg-eq__headline { font-size:18px; font-weight:700; }
     .dg-eq__disclaimer { padding-left:0 !important; }
-    .dg-story      { margin-top:40px; padding:26px 20px; border-radius:12px; }
+    .dg-story      { margin-top:40px; border-radius:12px; }
     .dg-flow { margin-top:36px; padding:32px 20px 28px; border-radius:10px; }
     .dg-flow-grid { grid-template-columns:1fr; gap:16px; }
     .dg-flow-desc { min-height:0; }
@@ -695,7 +694,7 @@
   .ap__st--wait{background:#f4f2eb;color:#9a9689;}
 
 
-  .nm{background:#fff;border:1px solid var(--border);border-radius:12px;padding:26px 28px;}
+  .nm{background:#fff;border:1px solid var(--border);border-radius:12px;padding:28px;}
   .nm h4{margin:0;font-size:17px;font-weight:800;letter-spacing:-.02em;}
   .nm .sub{margin:6px 0 0;font-size:12.5px;color:var(--muted);}
   .nm__hd-row{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;}
@@ -1424,21 +1423,16 @@
           <h3>같은 점수로 시작했지만, 진단을 이어가면 차이가 보입니다.</h3>
           <p>채용 당시 세 사람의 점수는 <strong>71~73점</strong>으로 비슷했습니다. 서류와 면접만으로는 차이를 확인하기 어려웠습니다.<br>하지만 채용 평가부터 수습기간 월별 평가, 재직 중 정기 진단까지 <strong>같은 7개 지표로 다섯 차례</strong> 측정하면, 분명한 차이가 나타납니다.</p>
         </div>
-        <div class="wbx" style="margin:34px 0 0;background:#fff;border:1px solid #e6e3d9;border-radius:12px;padding:26px 28px;">
+        <div class="wbx" style="margin:34px 0 0;background:#fff;border:1px solid #e6e3d9;border-radius:12px;padding:28px;">
 <div class="sl" style="margin-top:26px;">
           <div class="sl__chart">
             <svg viewBox="0 0 980 400" style="width:100%;height:auto;display:block;" role="img" aria-label="채용 평가에서 71~73점이던 세 사람이 수습 월별 평가와 재직 정기 진단을 거치며 91점, 73점, 49점으로 갈라지는 굤적 차트">
-              <g font-family="Pretendard, sans-serif" font-size="10.5" font-weight="800" letter-spacing="0.06em" text-anchor="middle">
-                <rect x="60" y="22" width="118" height="22" rx="5" fill="#eaf3ec"></rect><text x="119" y="37" fill="#3f7a56">채용 평가</text>
-                <rect x="184" y="22" width="512" height="22" rx="5" fill="#fbf1de"></rect><text x="440" y="37" fill="#a9780f">수습기간 · 월별 평가</text>
-                <rect x="702" y="22" width="178" height="22" rx="5" fill="#eaf1fb"></rect><text x="791" y="37" fill="#3573ad">재직 중 · 정기 진단</text>
-              </g>
               <g stroke="#f0eee6" stroke-width="1">
-                <line x1="70" y1="303" x2="880" y2="303"></line>
-                <line x1="70" y1="249" x2="880" y2="249"></line>
-                <line x1="70" y1="195" x2="880" y2="195"></line>
-                <line x1="70" y1="141" x2="880" y2="141"></line>
-                <line x1="70" y1="87" x2="880" y2="87"></line>
+                <line x1="0" y1="303" x2="880" y2="303"></line>
+                <line x1="0" y1="249" x2="880" y2="249"></line>
+                <line x1="0" y1="195" x2="880" y2="195"></line>
+                <line x1="0" y1="141" x2="880" y2="141"></line>
+                <line x1="0" y1="87" x2="880" y2="87"></line>
               </g>
               <g font-family="Pretendard, sans-serif" font-size="10.5" font-weight="700" fill="var(--ink)" text-anchor="end">
                 <text x="52" y="307">50</text><text x="52" y="253">60</text><text x="52" y="199">70</text><text x="52" y="145">80</text><text x="52" y="91">90</text>
