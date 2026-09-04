@@ -1,2 +1,8 @@
 User-agent: *
-Disallow: /
+Allow: /
+
+# 네이버 검색로봇
+User-agent: Yeti
+Allow: /
+
+Sitemap: https://aqbar.ai/sitemap.xml
