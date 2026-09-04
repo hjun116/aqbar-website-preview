@@ -325,6 +325,77 @@
     /* Feature 03 - interview guide 3-col */
     .aq-feat-guide      { grid-template-columns: 1fr !important; }
   }
+
+  /* Feature 03 sample report - separate mobile-only layout (desktop block above untouched) */
+  .aq-report-mobile { display: none; }
+  @media (max-width: 768px) {
+    .aq-report-desktop { display: none; }
+    .aq-report-mobile { display: block; }
+
+    .m-report-card { margin-top: 24px; border: 1px solid var(--border); border-radius: 14px; overflow: hidden; background: #fff; }
+    .m-report-card__bar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px 12px; padding: 12px 16px; background: #f5f5f5; border-bottom: 1px solid var(--border); }
+    .m-report-card__bar-title { display: flex; align-items: center; gap: 8px; min-width: 0; }
+    .m-report-card__dot { flex: none; width: 8px; height: 8px; border-radius: 50%; background: var(--primary-deep); }
+    .m-report-card__bar-label { font-size: 13px; font-weight: 700; color: var(--ink); }
+    .m-report-card__bar-meta { font-size: 10.5px; color: var(--muted); white-space: nowrap; }
+    .m-report-card__summary { display: flex; align-items: center; gap: 14px; padding: 16px; border-bottom: 1px solid var(--border); }
+    .m-report-card__score { flex: none; display: flex; align-items: center; justify-content: center; width: 56px; height: 56px; border-radius: 50%; border: 3.5px solid #16a34a; }
+    .m-report-card__score-num { font-size: 20px; font-weight: 700; color: var(--primary); line-height: 1; }
+    .m-report-card__intro { flex: 1; min-width: 0; }
+    .m-report-card__headline { margin: 0; font-size: 13.5px; font-weight: 600; line-height: 1.5; color: var(--ink); }
+    .m-report-card__date { margin: 6px 0 0; font-size: 11.5px; color: var(--muted); }
+
+    .m-radar-wrap { padding: 20px 16px 14px; display: flex; flex-direction: column; align-items: center; gap: 10px; }
+    .m-radar-wrap svg { width: 100%; max-width: 280px; height: auto; overflow: visible; }
+    .m-radar-legend { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 14px; max-width: 280px; }
+    .m-radar-legend__item { display: flex; align-items: center; gap: 5px; }
+    .m-radar-legend__dot { flex: none; width: 7px; height: 7px; border-radius: 50%; }
+    .m-radar-legend__dot--candidate { background: var(--accent); }
+    .m-radar-legend__dot--avg { background: #8c8c8c; }
+    .m-radar-legend__label { font-size: 11px; font-weight: 500; color: var(--muted); line-height: 1.3; }
+
+    .m-score-list { padding: 16px 20px 20px; display: flex; flex-direction: column; gap: 16px; }
+    .m-score-row { display: grid; grid-template-columns: 1fr auto; grid-template-rows: auto auto; gap: 4px 10px; align-items: center; }
+    .m-score-row__label { grid-column: 1; font-size: 14px; font-weight: 600; color: var(--ink); }
+    .m-score-row__bar { grid-column: 1 / -1; height: 6px; border-radius: 3px; background: #ecebe3; overflow: hidden; }
+    .m-score-row__bar span { display: block; height: 100%; border-radius: 3px; }
+    .m-score-row__meta { grid-column: 2; grid-row: 1; display: grid; grid-template-columns: 24px 64px; gap: 6px; align-items: center; }
+    .m-score-row__num { font-size: 13px; font-weight: 700; text-align: right; }
+    .m-score-row__badge { font-size: 11px; font-weight: 700; border-radius: 3px; padding: 2px 7px; white-space: nowrap; text-align: center; box-sizing: border-box; width: 100%; }
+    .m-score-row__bar--accent span { background: var(--accent); }
+    .m-score-row__num--accent { color: var(--accent); }
+    .m-score-row__badge--accent { color: var(--accent); background: #ece9fb; }
+    .m-score-row__bar--green span { background: #16a34a; }
+    .m-score-row__num--green { color: #16a34a; }
+    .m-score-row__badge--green { color: #166534; background: #dcfce7; }
+    .m-score-row__bar--amber span { background: #f59e0b; }
+    .m-score-row__num--amber { color: #b45309; }
+    .m-score-row__badge--amber { color: #92400e; background: #fef3c7; }
+
+    .m-report-card .m-label { font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin: 0 0 12px; }
+    .m-report-card > .m-label { padding: 16px 20px 0; border-top: 1px solid var(--border); }
+    .m-insight-grid { display: flex; flex-direction: column; gap: 12px; padding: 0 20px 16px; }
+    .m-insight { border-radius: 8px; padding: 14px 16px; }
+    .m-insight--strength { background: #eef6f1; }
+    .m-insight--risk { background: #fbeeee; }
+    .m-insight__title { font-size: 14px; font-weight: 700; letter-spacing: .04em; }
+    .m-insight--strength .m-insight__title { color: #0f7a5f; }
+    .m-insight--risk .m-insight__title { color: #b1483f; }
+    .m-insight ul { margin: 8px 0 0; padding-left: 18px; font-size: 14px; line-height: 1.6; }
+
+    .m-report-card__guide { padding: 16px 20px 20px; border-top: 1px solid var(--border); }
+    .m-report-card__guide .m-label { margin: 0 0 12px; }
+    .m-guide-grid { display: flex; flex-direction: column; gap: 10px; }
+    .m-guide-card { background: var(--primary); border-radius: 8px; padding: 14px 16px; color: #fff; }
+    .m-guide-card__label { font-size: 12px; letter-spacing: .08em; color: #9fc0e8; }
+    .m-guide-card p { margin: 8px 0 0; font-size: 14px; line-height: 1.55; }
+  }
+  @media (max-width: 360px) {
+    .m-report-card__bar { flex-direction: column; align-items: flex-start; }
+    .m-report-card__summary { flex-direction: column; align-items: center; text-align: center; }
+    .m-report-card__score { width: 64px; height: 64px; border-width: 4px; }
+    .m-report-card__score-num { font-size: 22px; }
+  }
   @media (max-width: 768px) {
     /* WHY AQBAR */
     .aq-why-h2  { font-size: clamp(26px, 7vw, 38px) !important; }
@@ -891,8 +962,8 @@
           </div>
         </div>
 
-        <!-- horizontal report card -->
-        <div style="margin-top:40px;background:#fff;border:1px solid var(--border);border-radius:14px;box-shadow:0 20px 48px -28px rgba(19,52,94,.35);overflow:hidden;">
+        <!-- horizontal report card (desktop only, see .aq-report-mobile below for <768px) -->
+        <div class="aq-report-desktop" style="margin-top:40px;background:#fff;border:1px solid var(--border);border-radius:14px;box-shadow:0 20px 48px -28px rgba(19,52,94,.35);overflow:hidden;">
           <!-- header bar -->
           <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 22px;border-bottom:1px solid var(--border);background:#f5f5f5;">
             <div style="display:flex;align-items:center;gap:8px;"><span style="width:8px;height:8px;border-radius:50%;background:var(--primary-deep);"></span><span style="font-size:13px;font-weight:700;">AQbar Assessment Report</span></div>
@@ -1004,6 +1075,158 @@
               <div style="background:var(--primary);border-radius:8px;padding:12px 14px;">
                 <div style="font-family:'Pretendard',sans-serif;font-size:12.5px;letter-spacing:.08em;color:#9fc0e8;">Q2 · 초기 판단을 재검토하는 습관 확인</div>
                 <div style="font-size:14.5px;color:#fff;margin-top:6px;line-height:1.55;">"MAU가 감소하는 상황에서 수수료 인상이 가장 큰 원인처럼 보이더라도, 실제로는 다른 요인이 더 클 수 있습니다. 모두가 당연하다고 생각한 원인을 그대로 받아들이지 않고, 먼저 의심하거나 다시 정의해본 경험이 있으시면 말씀해 주실 수 있나요? 그때 어떤 신호를 보고 기존 전제를 재검토하셨는지도 함께 설명해 주시면 좋겠습니다."</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- horizontal report card (mobile-only, <768px — desktop untouched above) -->
+        <div class="aq-report-mobile m-report-card">
+          <header class="m-report-card__bar">
+            <div class="m-report-card__bar-title">
+              <span class="m-report-card__dot" aria-hidden="true"></span>
+              <span class="m-report-card__bar-label">AQbar Assessment Report</span>
+            </div>
+            <span class="m-report-card__bar-meta">AQBAR-TEST-001 · 에이큐바</span>
+          </header>
+          <div class="m-report-card__summary">
+            <div class="m-report-card__score" aria-label="AQbar Score 72">
+              <span class="m-report-card__score-num">72</span>
+            </div>
+            <div class="m-report-card__intro">
+              <p class="m-report-card__headline">스스로 판단하고 실행 방향을 설정할 수 있는,<br>안정적인 문제 해결 및 기획 역량을 갖춘 인재</p>
+              <p class="m-report-card__date">평가일 2026-05-14</p>
+            </div>
+          </div>
+          <div class="m-radar-wrap">
+            <svg viewBox="0 0 250 250" role="img" aria-label="7개 핵심 지표 레이더 차트">
+              <polygon points="125,103.75 141.61,111.75 145.72,129.73 134.22,144.14 115.78,144.14 104.28,129.73 108.39,111.75" fill="none" stroke="#e6e6de" stroke-width="1"/>
+              <polygon points="125,82.5 158.23,98.5 166.44,134.46 143.44,163.29 106.56,163.29 83.56,134.46 91.77,98.5" fill="none" stroke="#e6e6de" stroke-width="1"/>
+              <polygon points="125,61.25 174.84,85.25 187.15,139.18 152.66,182.43 97.34,182.43 62.85,139.18 75.16,85.25" fill="none" stroke="#e6e6de" stroke-width="1"/>
+              <polygon points="125,40 191.45,72 207.87,143.91 161.88,201.58 88.12,201.58 42.13,143.91 58.55,72" fill="none" stroke="#cfcfc4" stroke-width="1"/>
+              <line x1="125" y1="125" x2="125" y2="40" stroke="#e6e6de" stroke-width="1"/>
+              <line x1="125" y1="125" x2="191.45" y2="72" stroke="#e6e6de" stroke-width="1"/>
+              <line x1="125" y1="125" x2="207.87" y2="143.91" stroke="#e6e6de" stroke-width="1"/>
+              <line x1="125" y1="125" x2="161.88" y2="201.58" stroke="#e6e6de" stroke-width="1"/>
+              <line x1="125" y1="125" x2="88.12" y2="201.58" stroke="#e6e6de" stroke-width="1"/>
+              <line x1="125" y1="125" x2="42.13" y2="143.91" stroke="#e6e6de" stroke-width="1"/>
+              <line x1="125" y1="125" x2="58.55" y2="72" stroke="#e6e6de" stroke-width="1"/>
+              <polygon points="125,68.05 175.5,84.72 186.32,138.99 146.39,169.42 99.92,177.07 66.99,138.24 85.13,93.2" fill="rgba(140,140,140,0.22)" stroke="rgba(120,120,120,0.45)" stroke-width="1.5" stroke-linejoin="round"/>
+              <polygon points="125,48.5 168.2,90.55 187.15,139.18 150.82,178.6 95.49,186.26 62.85,139.18 91.77,98.5" fill="rgba(91,76,196,0.18)" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round"/>
+              <circle cx="125" cy="48.5" r="3" fill="var(--accent)"/>
+              <circle cx="168.2" cy="90.55" r="3" fill="var(--accent)"/>
+              <circle cx="187.15" cy="139.18" r="3" fill="var(--accent)"/>
+              <circle cx="150.82" cy="178.6" r="3" fill="var(--accent)"/>
+              <circle cx="95.49" cy="186.26" r="3" fill="var(--accent)"/>
+              <circle cx="62.85" cy="139.18" r="3" fill="var(--accent)"/>
+              <circle cx="91.77" cy="98.5" r="3" fill="var(--accent)"/>
+              <text x="125" y="22" text-anchor="middle" font-size="10" font-weight="700" fill="var(--ink)">전제 인식·재정의</text>
+              <text x="185" y="62" text-anchor="start" font-size="10" font-weight="700" fill="var(--ink)">문제 구조화</text>
+              <text x="220" y="148" text-anchor="start" font-size="10" font-weight="700" fill="var(--ink)">의사결정</text>
+              <text x="170" y="220" text-anchor="start" font-size="10" font-weight="700" fill="var(--ink)">자기검증</text>
+              <text x="80" y="220" text-anchor="end" font-size="10" font-weight="700" fill="var(--ink)">논증 구조화</text>
+              <text x="35" y="148" text-anchor="end" font-size="10" font-weight="700" fill="var(--ink)">실행 가능성</text>
+              <text x="55" y="62" text-anchor="end" font-size="10" font-weight="700" fill="var(--ink)">통합적 추론</text>
+            </svg>
+            <div class="m-radar-legend" role="list" aria-label="레이더 차트 범례">
+              <span class="m-radar-legend__item" role="listitem">
+                <span class="m-radar-legend__dot m-radar-legend__dot--candidate" aria-hidden="true"></span>
+                <span class="m-radar-legend__label">지원자 점수</span>
+              </span>
+              <span class="m-radar-legend__item" role="listitem">
+                <span class="m-radar-legend__dot m-radar-legend__dot--avg" aria-hidden="true"></span>
+                <span class="m-radar-legend__label">동일 포지션 평균 점수</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="m-score-list">
+            <div class="m-score-row">
+              <span class="m-score-row__label">전제 인식·재정의</span>
+              <div class="m-score-row__meta">
+                <span class="m-score-row__num m-score-row__num--accent">90</span>
+                <span class="m-score-row__badge m-score-row__badge--accent">매우 우수</span>
+              </div>
+              <div class="m-score-row__bar m-score-row__bar--accent"><span style="width:90%"></span></div>
+            </div>
+            <div class="m-score-row">
+              <span class="m-score-row__label">문제 구조화</span>
+              <div class="m-score-row__meta">
+                <span class="m-score-row__num m-score-row__num--green">65</span>
+                <span class="m-score-row__badge m-score-row__badge--green">양호</span>
+              </div>
+              <div class="m-score-row__bar m-score-row__bar--green"><span style="width:65%"></span></div>
+            </div>
+            <div class="m-score-row">
+              <span class="m-score-row__label">의사결정</span>
+              <div class="m-score-row__meta">
+                <span class="m-score-row__num m-score-row__num--green">75</span>
+                <span class="m-score-row__badge m-score-row__badge--green">양호</span>
+              </div>
+              <div class="m-score-row__bar m-score-row__bar--green"><span style="width:75%"></span></div>
+            </div>
+            <div class="m-score-row">
+              <span class="m-score-row__label">자기검증</span>
+              <div class="m-score-row__meta">
+                <span class="m-score-row__num m-score-row__num--green">70</span>
+                <span class="m-score-row__badge m-score-row__badge--green">양호</span>
+              </div>
+              <div class="m-score-row__bar m-score-row__bar--green"><span style="width:70%"></span></div>
+            </div>
+            <div class="m-score-row">
+              <span class="m-score-row__label">논증 구조화</span>
+              <div class="m-score-row__meta">
+                <span class="m-score-row__num m-score-row__num--accent">80</span>
+                <span class="m-score-row__badge m-score-row__badge--accent">우수</span>
+              </div>
+              <div class="m-score-row__bar m-score-row__bar--accent"><span style="width:80%"></span></div>
+            </div>
+            <div class="m-score-row">
+              <span class="m-score-row__label">실행 가능성</span>
+              <div class="m-score-row__meta">
+                <span class="m-score-row__num m-score-row__num--green">75</span>
+                <span class="m-score-row__badge m-score-row__badge--green">양호</span>
+              </div>
+              <div class="m-score-row__bar m-score-row__bar--green"><span style="width:75%"></span></div>
+            </div>
+            <div class="m-score-row">
+              <span class="m-score-row__label">통합적 추론</span>
+              <div class="m-score-row__meta">
+                <span class="m-score-row__num m-score-row__num--amber">50</span>
+                <span class="m-score-row__badge m-score-row__badge--amber">보통</span>
+              </div>
+              <div class="m-score-row__bar m-score-row__bar--amber"><span style="width:50%"></span></div>
+            </div>
+          </div>
+
+          <p class="m-label">종합 코멘트 요약</p>
+          <div class="m-insight-grid">
+            <div class="m-insight m-insight--strength">
+              <div class="m-insight__title">핵심 강점</div>
+              <ul>
+                <li>세션 초반 문제의 본질을 재정의하고 논리적 근거를 세우는 구조적 사고가 안정적으로 확인됩니다.</li>
+                <li>판단 이후 실제 적용 가능한 방향으로 이어가는 실행 연계력이 일관되게 관찰됩니다.</li>
+              </ul>
+            </div>
+            <div class="m-insight m-insight--risk">
+              <div class="m-insight__title">핵심 리스크</div>
+              <ul>
+                <li>여러 정보를 연결해 새로운 결론을 도출하거나 모순을 통합 해석하는 능력을 보완할 필요가 있습니다.</li>
+                <li>문제를 하위 요소로 분해하거나 다각도로 재구성하는 깊이 있는 구조화 작업이 제한적으로 나타납니다.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="m-report-card__guide">
+            <p class="m-label">맞춤형 면접 질문 가이드 예시</p>
+            <div class="m-guide-grid">
+              <div class="m-guide-card">
+                <div class="m-guide-card__label">Q1 · 복합 문제의 구조화 방식 확인</div>
+                <p>"태스크에서 수익성·성장·사용자 경험이 동시에 충돌하는 상황을 다루셨는데, 문제를 나눌 때 어떤 기준으로 순서를 정하셨나요? 그 기준이 어디서 나온 건지, 실제로 복잡한 상황을 쪼개서 접근해본 경험과 연결해서 설명해 주시겠어요?"</p>
+              </div>
+              <div class="m-guide-card">
+                <div class="m-guide-card__label">Q2 · 초기 판단을 재검토하는 습관 확인</div>
+                <p>"MAU가 감소하는 상황에서 수수료 인상이 가장 큰 원인처럼 보이더라도, 실제로는 다른 요인이 더 클 수 있습니다. 모두가 당연하다고 생각한 원인을 그대로 받아들이지 않고, 먼저 의심하거나 다시 정의해본 경험이 있으시면 말씀해 주실 수 있나요? 그때 어떤 신호를 보고 기존 전제를 재검토하셨는지도 함께 설명해 주시면 좋겠습니다."</p>
               </div>
             </div>
           </div>
