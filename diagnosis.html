@@ -1029,10 +1029,21 @@
               <filter id="dgEqCardShadow" x="-20%" y="-40%" width="140%" height="200%">
                 <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#18202e" flood-opacity="0.09"></feDropShadow>
               </filter>
+              <marker id="dgEqArrowGray" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                <path d="M0,0 L10,5 L0,10 Z" fill="#8d8a80"></path>
+              </marker>
+              <marker id="dgEqArrowAccent" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                <path d="M0,0 L10,5 L0,10 Z" fill="var(--accent)"></path>
+              </marker>
             </defs>
 
             <text x="265" y="-8" font-size="16.8" font-weight="800" fill="#8d8a80" text-anchor="middle">AI가 속도를 높이는 구간</text>
             <text x="700" y="-8" font-size="16.8" font-weight="800" fill="var(--accent)" text-anchor="middle">문제해결 역량이 성과를 만드는 구간</text>
+
+            <line x1="177" y1="-14" x2="98" y2="-14" stroke="#8d8a80" stroke-width="1.5" marker-end="url(#dgEqArrowGray)"></line>
+            <line x1="353" y1="-14" x2="432" y2="-14" stroke="#8d8a80" stroke-width="1.5" marker-end="url(#dgEqArrowGray)"></line>
+            <line x1="576" y1="-14" x2="448" y2="-14" stroke="var(--accent)" stroke-width="1.5" marker-end="url(#dgEqArrowAccent)"></line>
+            <line x1="825" y1="-14" x2="952" y2="-14" stroke="var(--accent)" stroke-width="1.5" marker-end="url(#dgEqArrowAccent)"></line>
 
             <rect x="90" y="15" width="350" height="440" fill="#f5f3ec"></rect>
             <rect x="440" y="15" width="520" height="440" fill="#f8f7ff"></rect>
