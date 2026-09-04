@@ -7,19 +7,19 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://aqbar.ai/hiring.html</loc>
+    <loc>https://aqbar.ai/hiring/</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aqbar.ai/diagnosis.html</loc>
+    <loc>https://aqbar.ai/diagnosis/</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aqbar.ai/privacy.html</loc>
+    <loc>https://aqbar.ai/privacy/</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
