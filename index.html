@@ -226,16 +226,13 @@
   }
   /* CTA */
   .mn-cta{background:var(--primary);color:#fff;}
-  .mn-cta__inner{max-width:900px;margin:0 auto;padding:var(--sp) var(--gutter);text-align:center;}
+  .mn-cta__inner{max-width:900px;margin:0 auto;text-align:center;}
   .mn-cta h2{margin:0;color:#fff;}
   .mn-cta p{margin:26px auto 0;max-width:700px;font-size:18px;line-height:1.75;color:var(--on-dark-body);}
   .mn-cta__actions{display:flex;gap:12px;justify-content:center;margin-top:36px;flex-wrap:wrap;}
   .mn-cta__mail{margin:28px 0 0;font-size:14.5px;color:var(--on-dark-label);}
   .mn-cta__mail a{color:#fff;text-decoration:none;border-bottom:1px solid var(--on-dark-rule);}
   @media(max-width:768px){.mn-cta__actions{flex-direction:column;align-items:stretch;}.mn-cta__actions a{text-align:center;}}
-  /* .aq-sec 가 이미 좌우 여백을 주는데 .mn-cta__inner 가 한 번 더 줘서 CTA만
-     다른 섹션보다 20px씩 더 안으로 들어가 있었다. 모바일에서 가로만 뺀다 */
-  @media(max-width:768px){.mn-cta__inner{padding-left:0;padding-right:0;}}
   /* 헤드라인 첫 줄 '우리 회사의 일 잘하는 사람,' 이 끊기지 않는 최대 크기.
      좌우 여백이 고정폭이라 vw 비례만으로는 안 맞아 calc 로 뺀다 */
   @media(max-width:430px){.mn-cta h2{font-size:clamp(20px,calc(7.3vw - 3px),24px);}}
@@ -748,7 +745,6 @@
   @media(max-width:768px){ .mn-faq summary{ padding:16px 18px; font-size:16.5px; } .mn-faq__body{ padding:0 18px 18px; font-size:15.5px; } .mn-faq-chip{ font-size:12.5px; padding:7px 14px; } }
   /* ===== CTA 분리(위 다크 섹션과 경계) ===== */
   #contact{ border-top:1px solid rgba(255,255,255,.14); }
-  .mn-cta__inner::before{ content:''; display:block; width:44px; height:3px; border-radius:2px; background:var(--accent); margin:0 auto 28px; }
   @media(max-width:768px){
     .en-layers__grid{ grid-template-columns:1fr; }
     .en-layer{ border-right:none; border-bottom:1px solid var(--border); }
@@ -1367,7 +1363,7 @@
     <div style="max-width:1120px;margin:0 auto;padding:var(--sp) var(--gutter);">
       <div class="dg-why-conclusion" style="margin-top:0;">
         <div class="aq-label">RESEARCH</div>
-        <h2 class="aq-h2">그 문제해결 능력을 가르는 건,<br>결국 개인의 고유한 <span style="color:#9d8bff;">‘판단’</span>입니다.</h2>
+        <h2 class="aq-h2">그 문제해결 능력을 가르는 건,<br>개인의 고유한 <span style="color:#9d8bff;">‘판단’</span>입니다.</h2>
         <p>AI는 검색하고 분석하고 작성하고 실행합니다. <br class="mn-br-lg">그러나 <strong>무엇을 해야 하는지 정의하고, 무엇이 맞는지 판단하고, 검증을 통해 그 답을 수정하는 것</strong>은 <br class="mn-br-xl">여전히 사람의 몫입니다.</p>
       </div>
 
