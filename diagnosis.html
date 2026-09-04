@@ -490,10 +490,15 @@
   .dg-scanb-warn p { margin:0; font-size:13px; line-height:1.55; color:#8a6a6a; }
   @media (max-width:860px) {
     .dg-scanb-grid { grid-template-columns:1fr; }
-    .dg-scanb-row { grid-template-columns:18px 1fr; row-gap:2px; }
-    .dg-scanb-row b { grid-column:2; }
-    .dg-scanb-row small { grid-column:2; }
-    .dg-scanb-row em { grid-column:2; text-align:left; }
+    .dg-scanb-row {
+      grid-template-columns:18px 1fr auto;
+      grid-template-areas:"no label value" ". desc desc";
+      row-gap:2px; column-gap:8px;
+    }
+    .dg-scanb-row i { grid-area:no; }
+    .dg-scanb-row b { grid-area:label; }
+    .dg-scanb-row small { grid-area:desc; }
+    .dg-scanb-row em { grid-area:value; text-align:right; margin-left:8px; }
   }
 
   /* §01 성과 방정식 (AI 활용 역량 vs 문제해결 역량) */
