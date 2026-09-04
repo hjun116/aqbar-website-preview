@@ -265,9 +265,7 @@
   }
 
   @media (max-width: 768px) {
-    .dg-hero h1           { font-size: clamp(22px, 6vw, 30px); line-height: 1.35; }
     .dg-hero__eyebrow span.txt { font-size: 14px; }
-    .dg-hero__sub p       { font-size: 16px; }
     .dg-hero__actions     { flex-direction: column; align-items: stretch; }
     .dg-hero__actions a   { text-align: center; }
   }
@@ -573,7 +571,8 @@
   @media (max-width:900px) {
     .dg-hero__split { grid-template-columns:1fr; gap:36px; }
     .dg-hero__left { text-align:center; }
-    .dg-hero__left .aq-h1, .dg-hero__left .dg-hero__sub p { text-align:center; }
+    .dg-hero__left .aq-h1 { text-align:center; font-size:clamp(22px,6vw,30px); }
+    .dg-hero__left .dg-hero__sub p { text-align:center; font-size:16px; }
     .dg-hero__left .dg-hero__actions { justify-content:center; }
     .dg-hero__left .dg-hero__sub { margin-left:auto; margin-right:auto; }
   }
